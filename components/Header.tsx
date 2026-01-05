@@ -19,6 +19,29 @@ const Header: React.FC = () => {
     setMobileMenuOpen(false);
   };
 
+  const handleNavClick = (href: string) => {
+    setMobileMenuOpen(false);
+    // Extract the id from the href (remove the # prefix)
+    const id = href.slice(1);
+    
+    // If clicking "Home" link or empty hash, navigate to home page
+    if (id === 'hero' || id === '') {
+      window.location.hash = '';
+      window.scrollTo(0, 0);
+    } 
+    // If it's a page navigation (like solutions-page), change the hash
+    else if (id.includes('-page')) {
+      window.location.hash = id;
+    } 
+    // For same-page anchors, scroll to the section
+    else {
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 0);
+    }
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -27,20 +50,32 @@ const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+        <a 
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.hash = '';
+            window.scrollTo(0, 0);
+          }}
+          className="flex items-center gap-3 cursor-pointer"
+        >
           <img
             src="https://ik.imagekit.io/rrfyblezzy/conglomerate.png?updatedAt=1767572957486"
             alt="Intella Fusion logo"
             className="h-10 md:h-12 lg:h-14 object-contain"
           />
-        </div>
+        </a>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <a 
               key={link.label} 
-              href={link.href} 
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(link.href);
+              }}
               className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
             >
               {link.label}
@@ -74,9 +109,12 @@ const Header: React.FC = () => {
            {NAV_LINKS.map((link) => (
             <a 
               key={link.label} 
-              href={link.href} 
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(link.href);
+              }}
               className="text-lg font-medium text-slate-300 hover:text-white"
-              onClick={() => setMobileMenuOpen(false)}
             >
               {link.label}
             </a>

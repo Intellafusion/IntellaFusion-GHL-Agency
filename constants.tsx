@@ -17,7 +17,7 @@ import { SolutionItem, CaseStudy, ProcessStep, Testimonial } from './types';
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#hero' },
-  { label: 'Solutions', href: '#solutions' },
+  { label: 'Solutions', href: '#solutions-page' },
   { label: 'Industries', href: '#industries' },
   { label: 'Work', href: '#work' },
   { label: 'Process', href: '#process' },

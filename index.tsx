@@ -1,6 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Solutions from './pages/Solutions';
+
+function Router() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash === 'solutions-page') {
+        setCurrentPage('solutions');
+      } else {
+        setCurrentPage('home');
+      }
+      // Scroll to top when page changes
+      window.scrollTo(0, 0);
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Scroll to top when currentPage changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+  if (currentPage === 'solutions') {
+    return <Solutions />;
+  }
+  
+  return <App />;
+}
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -10,6 +43,6 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <Router />
   </React.StrictMode>
 );
