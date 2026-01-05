@@ -5,6 +5,7 @@ import Solutions from './pages/Solutions';
 import Work from './pages/Work';
 import About from './pages/About';
 import Pricing from './pages/Pricing';
+import Contact from './pages/Contact';
 
 function Router() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -20,6 +21,8 @@ function Router() {
         setCurrentPage('about');
       } else if (hash === 'pricing-page') {
         setCurrentPage('pricing');
+      } else if (hash === 'contact-page') {
+        setCurrentPage('contact');
       } else {
         setCurrentPage('home');
       }
@@ -51,6 +54,10 @@ function Router() {
   
   if (currentPage === 'pricing') {
     return <Pricing />;
+  }
+  
+  if (currentPage === 'contact') {
+    return <Contact />;
   }
   
   return <App />;

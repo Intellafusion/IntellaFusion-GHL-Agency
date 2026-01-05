@@ -26,9 +26,9 @@ export const NAV_LINKS = [
 export const SOLUTIONS: SolutionItem[] = [
   {
     id: 'web',
-    title: 'Conversion Website',
-    benefit: 'High-performance design built to convert visitors.',
-    features: ['Mobile-first architecture', 'Speed-optimized loading', 'Strategic CTA placement'],
+    title: 'Premium Website Design',
+    benefit: 'First impressions mean everything to prospects.',
+    features: ['Stand-out design that beats competitors', 'Trust-building visual cues & social proof', 'Speed-optimized mobile-first performance'],
     icon: MonitorSmartphone
   },
   {
@@ -82,9 +82,9 @@ export const SOLUTIONS: SolutionItem[] = [
   },
   {
     id: 'seo',
-    title: 'SEO Foundations',
-    benefit: 'Dominant local visibility.',
-    features: ['Technical SEO setup', 'Google Business Profile opt', 'Local citation building'],
+    title: 'LLM & SEO Optimization',
+    benefit: 'Rank across search engines and AI-powered discovery tools.',
+    features: ['ChatGPT & LLM indexing setup', 'Technical SEO & local rankings', 'Google Business Profile optimization'],
     icon: Search
   }
 ];
@@ -146,17 +146,19 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    quote: "We didn't need another brochure website. We needed a machine that actually booked appointments. IntellaFusion delivered exactly that.",
-    author: "Dr. Sarah Chen",
-    role: "Founder",
-    company: "Lumina Dental"
+    quote: "We didn't need another brochure website. We needed a classy, professional website. IntellaFusion delivered exactly that.",
+    author: "Bill Burke.",
+    role: "Politician",
+    company: "ElectBillBurke.com",
+    image: "https://ik.imagekit.io/rrfyblezzy/ChatGPT%20Image%20Dec%2027,%202025,%2012_41_31%20PM.png?updatedAt=1766867491055"
   },
   {
     id: '2',
     quote: "The missed call text-back feature alone paid for the entire system in the first week. It's calm, professional, and efficient.",
-    author: "Mark Reynolds",
-    role: "Owner",
-    company: "Reynolds Contracting"
+    author: "Tailor Geeting",
+    role: "Chief Flight Advisor",
+    company: "Private Pilot AI",
+    image: "https://ik.imagekit.io/rrfyblezzy/Untitled%20design%20(19).png?updatedAt=1750883259348"
   }
 ];
 

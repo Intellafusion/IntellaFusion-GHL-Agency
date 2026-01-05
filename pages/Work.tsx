@@ -255,7 +255,7 @@ function Work() {
           </h2>
           <p className="text-lg text-slate-400 mb-10 leading-relaxed">
             These results aren't accidents—they're the outcome of a proven system. 
-            Book a strategy call and let's map out how we can transform your business with a custom conversion engine.
+            Book a discovery call and let's map out how we can transform your business with a custom conversion engine.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -263,10 +263,11 @@ function Work() {
               onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
               className="px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-xl"
             >
-              Book Your Strategy Call <ArrowRight className="w-5 h-5" />
+              Book Your Discovery Call <ArrowRight className="w-5 h-5" />
             </a>
             <a 
-              href="/"
+              href="#solutions-page"
+              onClick={(e) => { e.preventDefault(); (window as any).__scrollToSection = 'solutions-grid'; window.location.hash = 'solutions-page'; }}
               className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-colors backdrop-blur-sm"
             >
               Explore Solutions
@@ -275,7 +276,6 @@ function Work() {
 
           {/* Trust indicators */}
           <div className="mt-12 pt-12 border-t border-slate-700">
-            <p className="text-slate-500 text-sm mb-4">Trusted by 50+ premium service businesses</p>
             <div className="flex justify-center items-center gap-2">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-brand-gold fill-brand-gold" />

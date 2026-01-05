@@ -4,7 +4,7 @@ import Section from './components/Section';
 import Button from './components/Button';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import { ArrowRight, Check, BarChart3, Clock, Lock, MessageSquare, ChevronDown, PhoneMissed, ShieldCheck, Monitor } from 'lucide-react';
+import { ArrowRight, Check, BarChart3, Clock, Lock, MessageSquare, ChevronDown, PhoneMissed, ShieldCheck, Monitor, Star } from 'lucide-react';
 import { SOLUTIONS, PROCESS, INDUSTRIES, CASE_STUDIES, TESTIMONIALS, FAQS } from './constants';
 import { motion } from 'framer-motion';
 
@@ -136,10 +136,13 @@ function App() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="primary" size="lg" withArrow onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}>
-                Book a Strategy Call
+              <Button variant="primary" size="lg" withArrow onClick={() => { window.location.hash = 'contact-page'; }}>
+                Book a Discovery Call
               </Button>
-              <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:border-white hover:text-white" onClick={() => document.getElementById('solutions')?.scrollIntoView({behavior: 'smooth'})}>
+              <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:border-white hover:text-white" onClick={() => {
+                  (window as any).__scrollToSection = 'solutions-grid';
+                  window.location.hash = 'solutions-page';
+                }}>
                 See How It Works
               </Button>
             </div>
@@ -159,7 +162,7 @@ function App() {
                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
                  </div>
-                 <div className="text-xs text-slate-500">IntellaFusion Command Center</div>
+                 <div className="text-xs text-slate-500">IntellaFusion Conversion Engine</div>
                </div>
                <div className="space-y-4">
                  <div className="flex items-center justify-between p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
@@ -260,7 +263,7 @@ function App() {
               Revenue Alert
            </div>
           <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6 leading-tight">
-            The "Silent" Leaks <br/> <span className="text-slate-400 italic font-light">Draining Your Revenue</span>
+            The "Silent" Leaks <br/> <span className="text-brand-gold italic font-light">Draining Your Revenue</span>
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
             Most service businesses are exceptional at their craft but lose momentum at the intake. 
@@ -375,6 +378,7 @@ function App() {
         <div className="text-center mt-12">
           <a 
             href="#solutions-page"
+            onClick={(e) => { e.preventDefault(); (window as any).__scrollToSection = 'solutions-grid'; window.location.hash = 'solutions-page'; }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors shadow-lg hover:shadow-xl"
           >
             View All 9 Solutions <ArrowRight className="w-5 h-5" />
@@ -431,7 +435,7 @@ function App() {
           <div className="lg:col-span-8">
             <div className="flex justify-between items-end mb-8">
               <h2 className="text-3xl font-serif text-slate-900">Recent Results</h2>
-              <a href="#work" className="hidden md:flex items-center gap-2 text-brand-gold font-medium hover:underline">View All Case Studies <ArrowRight className="w-4 h-4"/></a>
+              <a href="#work-page" onClick={(e) => { e.preventDefault(); window.location.hash = 'work-page'; }} className="hidden md:flex items-center gap-2 text-brand-gold font-medium hover:underline">View All Case Studies <ArrowRight className="w-4 h-4"/></a>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -505,9 +509,13 @@ function App() {
 
                 {/* Author info */}
                 <div className="flex items-center gap-4 pt-6 border-t border-slate-100">
-                  <div className="w-14 h-14 bg-gradient-to-br from-brand-navy to-brand-gold rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md">
-                    {t.author.charAt(0)}
-                  </div>
+                  {t.image ? (
+                    <img src={t.image} alt={t.author} className="w-14 h-14 rounded-full object-cover shadow-md" />
+                  ) : (
+                    <div className="w-14 h-14 bg-gradient-to-br from-brand-navy to-brand-gold rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md">
+                      {t.author.charAt(0)}
+                    </div>
+                  )}
                   <div>
                     <div className="font-bold text-slate-900 text-base">{t.author}</div>
                     <div className="text-sm text-slate-500">{t.role}</div>
@@ -523,7 +531,6 @@ function App() {
 
           {/* Trust badges or CTA */}
           <div className="text-center mt-12">
-            <p className="text-sm text-slate-400 mb-4">Join 50+ premium service businesses growing with IntellaFusion</p>
             <div className="flex justify-center items-center gap-8 flex-wrap">
               {[...Array(5)].map((_, i) => (
                 <div key={i} className="text-brand-gold flex items-center">
@@ -564,53 +571,43 @@ function App() {
         </div>
       </Section>
 
-      {/* --- CONTACT SECTION --- */}
-      <section id="contact" className="py-20 lg:py-32 bg-brand-navy relative overflow-hidden">
-        {/* Background Gradients */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+      {/* --- CTA SECTION --- */}
+      <Section dark>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6">
+            Ready to Write Your Success Story?
+          </h2>
+          <p className="text-lg text-slate-400 mb-10 leading-relaxed">
+            These results aren't accidents—they're the outcome of a proven system. 
+            Book a discovery call and let's connect and transform your business with a custom conversion engine.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#contact-page"
+              className="px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-xl"
+            >
+              Book Your Discovery Call <ArrowRight className="w-5 h-5" />
+            </a>
+            <a 
+              href="#solutions-page"
+              onClick={(e) => { e.preventDefault(); (window as any).__scrollToSection = 'solutions-grid'; window.location.hash = 'solutions-page'; }}
+              className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-colors backdrop-blur-sm"
+            >
+              Explore Solutions
+            </a>
+          </div>
 
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6">Let's Build Your Conversion Engine.</h2>
-              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                Ready to stop chasing leads and start closing them? Fill out the form to schedule your strategy audit.
-              </p>
-              
-              <div className="space-y-6 mb-12">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-gold border border-slate-700">
-                    <Check className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">100% Done-For-You Setup</div>
-                    <div className="text-sm text-slate-500">We handle tech, design, and automation.</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-gold border border-slate-700">
-                    <Check className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">Training Included</div>
-                    <div className="text-sm text-slate-500">Full team walkthrough and SOPs provided.</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Office Info */}
-              <div className="pt-8 border-t border-slate-800">
-                <div className="text-sm text-slate-400 mb-2">Service Areas:</div>
-                <div className="text-white font-medium">United States • Canada • UK • Australia</div>
-              </div>
+          {/* Trust indicators */}
+          <div className="mt-12 pt-12 border-t border-slate-700">
+            <div className="flex justify-center items-center gap-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-brand-gold fill-brand-gold" />
+              ))}
+              <span className="ml-2 text-slate-400 text-sm">5.0 Average Rating</span>
             </div>
-
-            {/* Form Component */}
-            <ContactForm />
           </div>
         </div>
-      </section>
+      </Section>
 
       <Footer />
     </div>

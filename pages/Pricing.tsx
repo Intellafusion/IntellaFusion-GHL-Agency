@@ -171,7 +171,7 @@ function Pricing() {
               <div className="mb-8 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-brand-gold/30">
                 <div className="mb-6">
                   <p className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Setup Fee</p>
-                  <div className="flex items-baseline gap-3">
+                  <div className="flex flex-wrap items-baseline gap-3">
                     <span className="text-5xl font-bold text-white">$597</span>
                     <span className="text-slate-300 text-lg">one-time</span>
                     <span className="bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap">
@@ -194,7 +194,7 @@ function Pricing() {
                 onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
                 className="w-full block text-center px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors shadow-xl mb-8 flex items-center justify-center gap-2"
               >
-                Book Your Strategy Call <ArrowRight className="w-5 h-5" />
+                Get Started <ArrowRight className="w-5 h-5" />
               </a>
 
               <div className="space-y-4">
@@ -347,12 +347,11 @@ function Pricing() {
             onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors shadow-xl"
           >
-            Book Your Free Strategy Call <ArrowRight className="w-5 h-5" />
+            Book Your Discovery Call <ArrowRight className="w-5 h-5" />
           </a>
 
           {/* Trust indicators */}
           <div className="mt-12 pt-12 border-t border-slate-700">
-            <p className="text-slate-500 text-sm mb-4">Trusted by 50+ premium service businesses</p>
             <div className="flex justify-center items-center gap-2">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-brand-gold fill-brand-gold" />

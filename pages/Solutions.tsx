@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import { SOLUTIONS } from '../constants';
 import { motion } from 'framer-motion';
 
@@ -20,6 +20,18 @@ function Solutions() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
+
+  useEffect(() => {
+    const target = (window as any).__scrollToSection;
+    if (target) {
+      // give the page a tick to render then scroll
+      setTimeout(() => {
+        const el = document.getElementById(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+      try { delete (window as any).__scrollToSection; } catch(e) { (window as any).__scrollToSection = undefined; }
+    }
+  }, []);
 
   return (
     <div className="min-h-screen font-sans text-slate-800 bg-brand-cream">
@@ -94,25 +106,25 @@ function Solutions() {
             <motion.div 
               key={sol.id} 
               variants={itemVariants}
-              className="bg-white group p-8 rounded-2xl border-2 border-slate-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
+              className="bg-white group p-7 rounded-xl border-2 border-slate-100 hover:border-brand-gold/30 hover:shadow-xl transition-all duration-300 relative overflow-hidden flex flex-col"
             >
               {/* Number Badge */}
-              <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 font-serif font-bold text-sm group-hover:bg-brand-gold group-hover:text-white transition-all duration-300">
+              <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 font-serif font-bold text-sm group-hover:bg-brand-gold group-hover:text-white transition-all duration-300">
                 {String(idx + 1).padStart(2, '0')}
               </div>
 
-              <div className="flex justify-between items-start mb-6">
-                <div className="p-4 bg-brand-navy/5 rounded-xl group-hover:bg-brand-navy group-hover:text-white transition-colors duration-300 text-brand-navy">
-                  <sol.icon className="w-7 h-7" />
+              <div className="flex justify-between items-start mb-5">
+                <div className="p-3.5 bg-brand-navy/5 rounded-lg group-hover:bg-brand-navy group-hover:text-white transition-colors duration-300 text-brand-navy">
+                  <sol.icon className="w-6 h-6" />
                 </div>
               </div>
               
-              <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-brand-gold transition-colors">{sol.title}</h3>
-              <p className="text-sm font-semibold text-brand-gold mb-6">{sol.benefit}</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-gold transition-colors">{sol.title}</h3>
+              <p className="text-sm font-semibold text-brand-gold mb-5">{sol.benefit}</p>
               
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2.5 mb-7 flex-grow">
                 {sol.features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-slate-600">
+                  <li key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-1.5 flex-shrink-0"></div>
                     <span>{f}</span>
                   </li>
@@ -120,7 +132,7 @@ function Solutions() {
               </ul>
               
               <button className="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-brand-gold flex items-center gap-1 transition-colors">
-                Learn More <ArrowRight className="w-3 h-3" />
+                See Workflow <ArrowRight className="w-3 h-3" />
               </button>
             </motion.div>
           ))}
@@ -176,26 +188,35 @@ function Solutions() {
       <Section dark>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6">
-            Ready to Install Your Conversion Engine?
+            Ready to Write Your Success Story?
           </h2>
           <p className="text-lg text-slate-400 mb-10 leading-relaxed">
-            Let's build a custom system that fits your business model, your customers, and your goals. 
-            Book a free strategy call to see exactly how these tools work together.
+            These results aren't accidents—they're the outcome of a proven system. 
+            Book a discovery call and let's map out how we can transform your business with a custom conversion engine.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="#hero"
-              onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
-              className="px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors flex items-center justify-center gap-2"
+              href="#contact-page"
+              className="px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-xl"
             >
-              Book Strategy Call <ArrowRight className="w-5 h-5" />
+              Book Your Strategy Call <ArrowRight className="w-5 h-5" />
             </a>
             <a 
-              href="/"
+              href="#work-page"
               className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-colors backdrop-blur-sm"
             >
-              Back to Home
+              View Case Studies
             </a>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="mt-12 pt-12 border-t border-slate-700">
+            <div className="flex justify-center items-center gap-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-brand-gold fill-brand-gold" />
+              ))}
+              <span className="ml-2 text-slate-400 text-sm">5.0 Average Rating</span>
+            </div>
           </div>
         </div>
       </Section>

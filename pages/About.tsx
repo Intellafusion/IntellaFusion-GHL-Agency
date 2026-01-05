@@ -274,8 +274,8 @@ function About() {
             Let's Build Your Conversion Engine
           </h2>
           <p className="text-lg text-slate-400 mb-10 leading-relaxed">
-            If you're serious about scaling without adding chaos, let's talk. 
-            August personally leads every discovery call to ensure we're the right fit and to map out your exact system.
+            These results aren't accidents—they're the outcome of a proven system. 
+            Book a discovery call and let's map out how we can transform your business with a custom conversion engine.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -283,10 +283,11 @@ function About() {
               onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
               className="px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-xl"
             >
-              Book a Call with August <ArrowRight className="w-5 h-5" />
+              Book Your Discovery Call <ArrowRight className="w-5 h-5" />
             </a>
             <a 
               href="#solutions-page"
+              onClick={(e) => { e.preventDefault(); (window as any).__scrollToSection = 'solutions-grid'; window.location.hash = 'solutions-page'; }}
               className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-colors backdrop-blur-sm"
             >
               See Our Solutions
@@ -295,7 +296,6 @@ function About() {
 
           {/* Trust indicators */}
           <div className="mt-12 pt-12 border-t border-slate-700">
-            <p className="text-slate-500 text-sm mb-4">Trusted by 50+ service businesses across healthcare, home services, and professional sectors</p>
             <div className="flex justify-center items-center gap-2">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-brand-gold fill-brand-gold" />

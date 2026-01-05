@@ -23,6 +23,7 @@ export interface Testimonial {
   author: string;
   role: string;
   company: string;
+  image?: string;
 }
 
 export interface ProcessStep {

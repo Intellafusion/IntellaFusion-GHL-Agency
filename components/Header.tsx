@@ -89,9 +89,11 @@ const Header: React.FC = () => {
             <User className="w-3 h-3" />
             Client Portal
           </a>
-          <Button variant="primary" size="sm" onClick={scrollToContact}>
-            Book Strategy Call
-          </Button>
+          <a href="#contact-page">
+            <Button variant="primary" size="sm">
+              Book Discovery Call
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -124,9 +126,11 @@ const Header: React.FC = () => {
             <User className="w-4 h-4" />
             Client Portal
           </a>
-          <Button variant="primary" onClick={scrollToContact} className="w-full">
-            Book Strategy Call
-          </Button>
+          <a href="#contact-page" onClick={() => setMobileMenuOpen(false)}>
+            <Button variant="primary" className="w-full">
+              Book Strategy Call
+            </Button>
+          </a>
         </div>
       )}
     </header>

@@ -75,18 +75,6 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
 
-      <div className="mb-6">
-        <label className="block text-sm font-medium text-slate-700 mb-2">What are your primary needs?</label>
-        <div className="grid grid-cols-2 gap-3">
-          {['New Website', 'Lead Automation', 'Missed Call Text-Back', 'Reputation/Reviews', 'Reactivation Campaigns', 'SEO/Visibility'].map((item) => (
-            <label key={item} className="flex items-center gap-2 p-3 border border-slate-100 rounded-lg cursor-pointer hover:bg-slate-50 transition-colors">
-              <input type="checkbox" className="w-4 h-4 text-brand-gold rounded focus:ring-brand-gold" />
-              <span className="text-sm text-slate-600">{item}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
       <div className="mb-8">
         <label className="block text-sm font-medium text-slate-700 mb-2">Anything else we should know?</label>
         <textarea className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all h-24" placeholder="Current challenges, timeline, etc."></textarea>
