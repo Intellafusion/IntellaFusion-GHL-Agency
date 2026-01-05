@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
-import { ArrowRight, Check, Star, Zap, Phone, Code, TrendingUp, Users, Shield, Settings, MessageSquare, BarChart, Clock, Award } from 'lucide-react';
+import { ArrowRight, Check, Star, Zap, Phone, Code, TrendingUp, Users, Shield, Settings, MessageSquare, BarChart, Clock, Award, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function Pricing() {
@@ -270,49 +270,64 @@ function Pricing() {
             <p className="text-lg text-slate-600">Everything you need to know about our pricing and packages</p>
           </div>
 
-          <div className="space-y-6">
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-              <h3 className="text-lg font-bold text-slate-900 mb-2">What's the difference between the two packages?</h3>
-              <p className="text-slate-600 leading-relaxed">
+          <div className="space-y-4">
+            <details className="group bg-white border border-slate-200 rounded-lg overflow-hidden">
+              <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-50 group-open:bg-white transition-colors">
+                <h4 className="font-semibold text-slate-800">What's the difference between the two packages?</h4>
+                <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
                 The Premium Website gives you a professional online presence with hosting and maintenance. 
                 The Conversion Engine package includes everything from the Premium Website PLUS our complete automation suite—
                 speed-to-lead systems, intelligent routing, multi-channel follow-up, and advanced analytics. 
                 It's designed for businesses ready to maximize every lead.
-              </p>
-            </div>
+              </div>
+            </details>
 
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-              <h3 className="text-lg font-bold text-slate-900 mb-2">How long does implementation take?</h3>
-              <p className="text-slate-600 leading-relaxed">
+            <details className="group bg-white border border-slate-200 rounded-lg overflow-hidden">
+              <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-50 group-open:bg-white transition-colors">
+                <h4 className="font-semibold text-slate-800">How long does implementation take?</h4>
+                <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
                 Premium Websites typically launch in 2-3 weeks. The full Conversion Engine implementation takes 4-6 weeks, 
                 including custom configuration, integration, testing, and team training. We prioritize quality over speed.
-              </p>
-            </div>
+              </div>
+            </details>
 
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Can I upgrade from Premium Website to Conversion Engine later?</h3>
-              <p className="text-slate-600 leading-relaxed">
+            <details className="group bg-white border border-slate-200 rounded-lg overflow-hidden">
+              <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-50 group-open:bg-white transition-colors">
+                <h4 className="font-semibold text-slate-800">Can I upgrade from Premium Website to Conversion Engine later?</h4>
+                <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
                 Absolutely! Many clients start with the Premium Website and upgrade once they see the results. 
                 We'll apply your initial investment toward the upgrade and get your conversion systems running quickly.
-              </p>
-            </div>
+              </div>
+            </details>
 
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-              <h3 className="text-lg font-bold text-slate-900 mb-2">What happens after the one-time setup fee?</h3>
-              <p className="text-slate-600 leading-relaxed">
+            <details className="group bg-white border border-slate-200 rounded-lg overflow-hidden">
+              <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-50 group-open:bg-white transition-colors">
+                <h4 className="font-semibold text-slate-800">What happens after the one-time setup fee?</h4>
+                <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
                 The monthly fee covers hosting, maintenance, updates, support, and ongoing optimization. 
                 For Conversion Engine clients, this also includes system monitoring, integration maintenance, 
                 and quarterly strategy sessions to ensure your systems continue delivering results.
-              </p>
-            </div>
+              </div>
+            </details>
 
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Do you offer payment plans?</h3>
-              <p className="text-slate-600 leading-relaxed">
+            <details className="group bg-white border border-slate-200 rounded-lg overflow-hidden">
+              <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-50 group-open:bg-white transition-colors">
+                <h4 className="font-semibold text-slate-800">Do you offer payment plans?</h4>
+                <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
                 Yes! We offer flexible payment options for both packages. Discuss your needs on our discovery call, 
                 and we'll work out a structure that makes sense for your business.
-              </p>
-            </div>
+              </div>
+            </details>
           </div>
         </div>
       </Section>

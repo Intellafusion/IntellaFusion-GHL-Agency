@@ -250,19 +250,19 @@ function App() {
       </div>
 
       {/* --- THE PROBLEM --- */}
-      <Section className="bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+      <Section className="bg-brand-navy relative overflow-hidden">
         {/* Background decorative blob */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-slate-200/20 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-brand-gold/10 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="text-center max-w-3xl mx-auto mb-20 relative z-10">
-           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-600 text-xs font-bold tracking-wider uppercase mb-6">
+           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-xs font-bold tracking-wider uppercase mb-6">
               <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
               Revenue Alert
            </div>
-          <h2 className="text-4xl lg:text-5xl font-serif text-slate-900 mb-6 leading-tight">
+          <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6 leading-tight">
             The "Silent" Leaks <br/> <span className="text-slate-400 italic font-light">Draining Your Revenue</span>
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-lg text-slate-300 leading-relaxed">
             Most service businesses are exceptional at their craft but lose momentum at the intake. 
             These four invisible gaps are likely costing you 30% of your monthly bookings.
           </p>
@@ -275,50 +275,50 @@ function App() {
               desc: "First impressions are final. If your website looks old or unprofessional, high-value clients assume your service is too.",
               icon: Monitor,
               stat: "75% Judge on Design",
-              color: "text-indigo-600"
+              color: "text-brand-gold"
             },
             { 
               title: "Slow Speed-to-Lead", 
               desc: "Leads go cold in 5 minutes. If you rely on manual follow-up, you're handing customers to the competition.", 
               icon: Clock,
               stat: "391% Drop in Conversion",
-              color: "text-amber-600"
+              color: "text-brand-gold"
             },
             { 
               title: "Unanswered Calls", 
               desc: "62% of calls to small businesses go to voicemail. 85% of those callers will not call back—they just call the next guy.", 
               icon: PhoneMissed,
               stat: "Lost Lifetime Value",
-              color: "text-red-600"
+              color: "text-brand-gold"
             },
             { 
               title: "Scattered Channels", 
               desc: "DMs, texts, emails, and sticky notes. Leads slip through the cracks of disorganized systems, creating chaos.", 
               icon: MessageSquare,
               stat: "20+ Admin Hours Wasted",
-              color: "text-blue-600"
+              color: "text-brand-gold"
             }
           ].map((item, idx) => (
             <motion.div 
               key={idx}
               whileHover={{ y: -8 }}
-              className="group bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-slate-200"
+              className="group bg-white/5 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/10 relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-brand-gold/30"
             >
               {/* Hover Top Border */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-all duration-300">
-                  <item.icon className="w-7 h-7 text-slate-600 group-hover:text-brand-gold transition-colors" />
+                <div className="w-14 h-14 bg-brand-gold/20 rounded-2xl flex items-center justify-center group-hover:bg-brand-gold group-hover:text-white transition-all duration-300">
+                  <item.icon className="w-7 h-7 text-brand-gold group-hover:text-white transition-colors" />
                 </div>
-                <div className="text-xs font-bold text-slate-300 font-serif opacity-50">0{idx + 1}</div>
+                <div className="text-xs font-bold text-slate-500 font-serif opacity-50">0{idx + 1}</div>
               </div>
 
-              <h3 className="text-2xl font-serif text-slate-900 mb-4">{item.title}</h3>
-              <p className="text-slate-500 leading-relaxed text-sm mb-8">{item.desc}</p>
+              <h3 className="text-2xl font-serif text-white mb-4">{item.title}</h3>
+              <p className="text-slate-400 leading-relaxed text-sm mb-8">{item.desc}</p>
               
-              <div className="pt-6 border-t border-slate-50 flex flex-col gap-1">
-                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Negative Impact</span>
+              <div className="pt-6 border-t border-white/10 flex flex-col gap-1">
+                <span className="text-[10px] uppercase tracking-widest text-slate-500 font-semibold">Negative Impact</span>
                 <span className={`text-sm font-bold ${item.color}`}>{item.stat}</span>
               </div>
             </motion.div>
@@ -466,17 +466,17 @@ function App() {
       </Section>
 
       {/* --- TESTIMONIALS --- */}
-      <Section className="bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+      <Section className="bg-brand-navy relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-brand-gold/5 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-brand-gold/10 blur-[100px] rounded-full pointer-events-none" />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <span className="text-brand-gold font-semibold tracking-wider text-sm uppercase">Client Success Stories</span>
-            <h2 className="text-3xl lg:text-4xl font-serif font-medium text-slate-900 mt-2 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-serif font-medium text-white mt-2 mb-4">
               Trusted by Industry Leaders
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
+            <p className="text-slate-300 max-w-2xl mx-auto">
               Real businesses. Real results. See what our partners have to say about their transformation.
             </p>
           </div>
@@ -523,7 +523,7 @@ function App() {
 
           {/* Trust badges or CTA */}
           <div className="text-center mt-12">
-            <p className="text-sm text-slate-500 mb-4">Join 50+ premium service businesses growing with IntellaFusion</p>
+            <p className="text-sm text-slate-400 mb-4">Join 50+ premium service businesses growing with IntellaFusion</p>
             <div className="flex justify-center items-center gap-8 flex-wrap">
               {[...Array(5)].map((_, i) => (
                 <div key={i} className="text-brand-gold flex items-center">
@@ -532,24 +532,30 @@ function App() {
                   </svg>
                 </div>
               ))}
-              <span className="text-xs font-semibold text-slate-600 uppercase tracking-wider">5.0 Average Rating</span>
+              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">5.0 Average Rating</span>
             </div>
           </div>
         </div>
       </Section>
 
       {/* --- FAQ --- */}
-      <Section>
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-serif text-center mb-12">Frequently Asked Questions</h2>
+      <Section className="bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-brand-gold font-semibold tracking-wider text-sm uppercase">Got Questions?</span>
+            <h2 className="text-3xl lg:text-4xl font-serif text-slate-900 mt-2 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Quick answers to common questions about our conversion engines, implementation process, and how we help businesses scale.
+            </p>
+          </div>
           <div className="space-y-4">
             {FAQS.map((faq, idx) => (
-              <details key={idx} className="group bg-white border border-slate-200 rounded-lg overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-50 group-open:bg-white transition-colors">
-                  <h4 className="font-semibold text-slate-800">{faq.q}</h4>
-                  <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
+              <details key={idx} className="group bg-white border-2 border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                <summary className="flex items-center justify-between p-6 cursor-pointer bg-white group-open:bg-slate-50 transition-colors">
+                  <h4 className="font-bold text-slate-900 text-base pr-4">{faq.q}</h4>
+                  <ChevronDown className="w-5 h-5 text-brand-gold group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
+                <div className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
                   {faq.a}
                 </div>
               </details>
