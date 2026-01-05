@@ -3,7 +3,8 @@ import Header from './components/Header';
 import Section from './components/Section';
 import Button from './components/Button';
 import ContactForm from './components/ContactForm';
-import { ArrowRight, Check, BarChart3, Clock, Lock, MessageSquare, ChevronDown, PhoneMissed, ShieldCheck, Monitor } from 'lucide-react';
+import Footer from './components/Footer';
+import { ArrowRight, Check, BarChart3, Clock, Lock, MessageSquare, ChevronDown, PhoneMissed, ShieldCheck, Monitor, Star } from 'lucide-react';
 import { SOLUTIONS, PROCESS, INDUSTRIES, CASE_STUDIES, TESTIMONIALS, FAQS } from './constants';
 import { motion } from 'framer-motion';
 
@@ -135,10 +136,13 @@ function App() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="primary" size="lg" withArrow onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}>
-                Book a Strategy Call
+              <Button variant="primary" size="lg" withArrow onClick={() => { window.location.hash = 'contact-page'; }}>
+                Book a Discovery Call
               </Button>
-              <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:border-white hover:text-white" onClick={() => document.getElementById('solutions')?.scrollIntoView({behavior: 'smooth'})}>
+              <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:border-white hover:text-white" onClick={() => {
+                  (window as any).__scrollToSection = 'solutions-grid';
+                  window.location.hash = 'solutions-page';
+                }}>
                 See How It Works
               </Button>
             </div>
@@ -158,7 +162,7 @@ function App() {
                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
                  </div>
-                 <div className="text-xs text-slate-500">IntellaFusion Command Center</div>
+                 <div className="text-xs text-slate-500">IntellaFusion Conversion Engine</div>
                </div>
                <div className="space-y-4">
                  <div className="flex items-center justify-between p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
@@ -249,19 +253,19 @@ function App() {
       </div>
 
       {/* --- THE PROBLEM --- */}
-      <Section className="bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+      <Section className="bg-brand-navy relative overflow-hidden">
         {/* Background decorative blob */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-slate-200/20 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-brand-gold/10 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="text-center max-w-3xl mx-auto mb-20 relative z-10">
-           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-600 text-xs font-bold tracking-wider uppercase mb-6">
+           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-xs font-bold tracking-wider uppercase mb-6">
               <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
               Revenue Alert
            </div>
-          <h2 className="text-4xl lg:text-5xl font-serif text-slate-900 mb-6 leading-tight">
-            The "Silent" Leaks <br/> <span className="text-slate-400 italic font-light">Draining Your Revenue</span>
+          <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6 leading-tight">
+            The "Silent" Leaks <br/> <span className="text-brand-gold italic font-light">Draining Your Revenue</span>
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-lg text-slate-300 leading-relaxed">
             Most service businesses are exceptional at their craft but lose momentum at the intake. 
             These four invisible gaps are likely costing you 30% of your monthly bookings.
           </p>
@@ -274,50 +278,50 @@ function App() {
               desc: "First impressions are final. If your website looks old or unprofessional, high-value clients assume your service is too.",
               icon: Monitor,
               stat: "75% Judge on Design",
-              color: "text-indigo-600"
+              color: "text-brand-gold"
             },
             { 
               title: "Slow Speed-to-Lead", 
               desc: "Leads go cold in 5 minutes. If you rely on manual follow-up, you're handing customers to the competition.", 
               icon: Clock,
               stat: "391% Drop in Conversion",
-              color: "text-amber-600"
+              color: "text-brand-gold"
             },
             { 
               title: "Unanswered Calls", 
               desc: "62% of calls to small businesses go to voicemail. 85% of those callers will not call back—they just call the next guy.", 
               icon: PhoneMissed,
               stat: "Lost Lifetime Value",
-              color: "text-red-600"
+              color: "text-brand-gold"
             },
             { 
               title: "Scattered Channels", 
               desc: "DMs, texts, emails, and sticky notes. Leads slip through the cracks of disorganized systems, creating chaos.", 
               icon: MessageSquare,
               stat: "20+ Admin Hours Wasted",
-              color: "text-blue-600"
+              color: "text-brand-gold"
             }
           ].map((item, idx) => (
             <motion.div 
               key={idx}
               whileHover={{ y: -8 }}
-              className="group bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-slate-200"
+              className="group bg-white/5 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/10 relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-brand-gold/30"
             >
               {/* Hover Top Border */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-all duration-300">
-                  <item.icon className="w-7 h-7 text-slate-600 group-hover:text-brand-gold transition-colors" />
+                <div className="w-14 h-14 bg-brand-gold/20 rounded-2xl flex items-center justify-center group-hover:bg-brand-gold group-hover:text-white transition-all duration-300">
+                  <item.icon className="w-7 h-7 text-brand-gold group-hover:text-white transition-colors" />
                 </div>
-                <div className="text-xs font-bold text-slate-300 font-serif opacity-50">0{idx + 1}</div>
+                <div className="text-xs font-bold text-slate-500 font-serif opacity-50">0{idx + 1}</div>
               </div>
 
-              <h3 className="text-2xl font-serif text-slate-900 mb-4">{item.title}</h3>
-              <p className="text-slate-500 leading-relaxed text-sm mb-8">{item.desc}</p>
+              <h3 className="text-2xl font-serif text-white mb-4">{item.title}</h3>
+              <p className="text-slate-400 leading-relaxed text-sm mb-8">{item.desc}</p>
               
-              <div className="pt-6 border-t border-slate-50 flex flex-col gap-1">
-                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Negative Impact</span>
+              <div className="pt-6 border-t border-white/10 flex flex-col gap-1">
+                <span className="text-[10px] uppercase tracking-widest text-slate-500 font-semibold">Negative Impact</span>
                 <span className={`text-sm font-bold ${item.color}`}>{item.stat}</span>
               </div>
             </motion.div>
@@ -327,9 +331,12 @@ function App() {
 
       {/* --- SOLUTIONS GRID --- */}
       <Section id="solutions">
-        <div className="mb-16">
+        <div className="mb-16 text-center">
           <span className="text-brand-gold font-semibold tracking-wider text-sm uppercase">What We Install</span>
           <h2 className="text-3xl lg:text-4xl font-serif font-medium text-slate-900 mt-2">The IntellaFusion Conversion Engine</h2>
+          <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
+            9 powerful systems working together to capture, engage, and convert your leads automatically.
+          </p>
         </div>
         
         <motion.div 
@@ -339,7 +346,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {SOLUTIONS.map((sol) => (
+          {SOLUTIONS.slice(0, 6).map((sol) => (
             <motion.div 
               key={sol.id} 
               variants={itemVariants}
@@ -366,6 +373,17 @@ function App() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* View All Solutions CTA */}
+        <div className="text-center mt-12">
+          <a 
+            href="#solutions-page"
+            onClick={(e) => { e.preventDefault(); (window as any).__scrollToSection = 'solutions-grid'; window.location.hash = 'solutions-page'; }}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors shadow-lg hover:shadow-xl"
+          >
+            View All 9 Solutions <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
       </Section>
 
       {/* --- HOW IT WORKS (Process) --- */}
@@ -417,7 +435,7 @@ function App() {
           <div className="lg:col-span-8">
             <div className="flex justify-between items-end mb-8">
               <h2 className="text-3xl font-serif text-slate-900">Recent Results</h2>
-              <a href="#work" className="hidden md:flex items-center gap-2 text-brand-gold font-medium hover:underline">View All Case Studies <ArrowRight className="w-4 h-4"/></a>
+              <a href="#work-page" onClick={(e) => { e.preventDefault(); window.location.hash = 'work-page'; }} className="hidden md:flex items-center gap-2 text-brand-gold font-medium hover:underline">View All Case Studies <ArrowRight className="w-4 h-4"/></a>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -452,40 +470,99 @@ function App() {
       </Section>
 
       {/* --- TESTIMONIALS --- */}
-      <Section className="bg-slate-50 border-y border-slate-200">
-        <div className="max-w-4xl mx-auto">
+      <Section className="bg-brand-navy relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-brand-gold/10 blur-[100px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-brand-gold font-semibold tracking-wider text-sm uppercase">Client Success Stories</span>
+            <h2 className="text-3xl lg:text-4xl font-serif font-medium text-white mt-2 mb-4">
+              Trusted by Industry Leaders
+            </h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Real businesses. Real results. See what our partners have to say about their transformation.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {TESTIMONIALS.map((t) => (
-              <div key={t.id} className="bg-white p-8 rounded-xl shadow-sm relative">
-                <div className="text-brand-gold text-4xl font-serif absolute top-4 left-4 opacity-20">"</div>
-                <p className="text-slate-700 italic mb-6 relative z-10">{t.quote}</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500 font-bold">
-                    {t.author.charAt(0)}
-                  </div>
+              <motion.div 
+                key={t.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="bg-white p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-xl border border-slate-100 relative group transition-all duration-300"
+              >
+                {/* Decorative quote mark */}
+                <div className="absolute top-6 right-6 text-brand-gold/10 group-hover:text-brand-gold/20 transition-colors">
+                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 32 32">
+                    <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                  </svg>
+                </div>
+
+                {/* Quote */}
+                <p className="text-slate-700 text-lg leading-relaxed mb-8 relative z-10 italic">
+                  "{t.quote}"
+                </p>
+
+                {/* Author info */}
+                <div className="flex items-center gap-4 pt-6 border-t border-slate-100">
+                  {t.image ? (
+                    <img src={t.image} alt={t.author} className="w-14 h-14 rounded-full object-cover shadow-md" />
+                  ) : (
+                    <div className="w-14 h-14 bg-gradient-to-br from-brand-navy to-brand-gold rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md">
+                      {t.author.charAt(0)}
+                    </div>
+                  )}
                   <div>
-                    <div className="font-bold text-slate-900 text-sm">{t.author}</div>
-                    <div className="text-xs text-slate-500">{t.role}, {t.company}</div>
+                    <div className="font-bold text-slate-900 text-base">{t.author}</div>
+                    <div className="text-sm text-slate-500">{t.role}</div>
+                    <div className="text-xs text-brand-gold font-semibold mt-0.5">{t.company}</div>
                   </div>
                 </div>
-              </div>
+
+                {/* Hover accent line */}
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </motion.div>
             ))}
+          </div>
+
+          {/* Trust badges or CTA */}
+          <div className="text-center mt-12">
+            <div className="flex justify-center items-center gap-8 flex-wrap">
+              {[...Array(5)].map((_, i) => (
+                <div key={i} className="text-brand-gold flex items-center">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              ))}
+              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">5.0 Average Rating</span>
+            </div>
           </div>
         </div>
       </Section>
 
       {/* --- FAQ --- */}
-      <Section>
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-serif text-center mb-12">Frequently Asked Questions</h2>
+      <Section className="bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-brand-gold font-semibold tracking-wider text-sm uppercase">Got Questions?</span>
+            <h2 className="text-3xl lg:text-4xl font-serif text-slate-900 mt-2 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Quick answers to common questions about our conversion engines, implementation process, and how we help businesses scale.
+            </p>
+          </div>
           <div className="space-y-4">
             {FAQS.map((faq, idx) => (
-              <details key={idx} className="group bg-white border border-slate-200 rounded-lg overflow-hidden">
-                <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-50 group-open:bg-white transition-colors">
-                  <h4 className="font-semibold text-slate-800">{faq.q}</h4>
-                  <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
+              <details key={idx} className="group bg-white border-2 border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                <summary className="flex items-center justify-between p-6 cursor-pointer bg-white group-open:bg-slate-50 transition-colors">
+                  <h4 className="font-bold text-slate-900 text-base pr-4">{faq.q}</h4>
+                  <ChevronDown className="w-5 h-5 text-brand-gold group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
+                <div className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
                   {faq.a}
                 </div>
               </details>
@@ -494,99 +571,45 @@ function App() {
         </div>
       </Section>
 
-      {/* --- CONTACT SECTION --- */}
-      <section id="contact" className="py-20 lg:py-32 bg-brand-navy relative overflow-hidden">
-        {/* Background Gradients */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6">Let's Build Your Conversion Engine.</h2>
-              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                Ready to stop chasing leads and start closing them? Fill out the form to schedule your strategy audit.
-              </p>
-              
-              <div className="space-y-6 mb-12">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-gold border border-slate-700">
-                    <Check className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">100% Done-For-You Setup</div>
-                    <div className="text-sm text-slate-500">We handle tech, design, and automation.</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-brand-gold border border-slate-700">
-                    <Check className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">Training Included</div>
-                    <div className="text-sm text-slate-500">Full team walkthrough and SOPs provided.</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Office Info */}
-              <div className="pt-8 border-t border-slate-800">
-                <div className="text-sm text-slate-400 mb-2">Service Areas:</div>
-                <div className="text-white font-medium">United States • Canada • UK • Australia</div>
-              </div>
-            </div>
-
-            {/* Form Component */}
-            <ContactForm />
+      {/* --- CTA SECTION --- */}
+      <Section dark>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6">
+            Ready to Write Your Success Story?
+          </h2>
+          <p className="text-lg text-slate-400 mb-10 leading-relaxed">
+            These results aren't accidents—they're the outcome of a proven system. 
+            Book a discovery call and let's connect and transform your business with a custom conversion engine.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#contact-page"
+              className="px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-xl"
+            >
+              Book Your Discovery Call <ArrowRight className="w-5 h-5" />
+            </a>
+            <a 
+              href="#solutions-page"
+              onClick={(e) => { e.preventDefault(); (window as any).__scrollToSection = 'solutions-grid'; window.location.hash = 'solutions-page'; }}
+              className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-colors backdrop-blur-sm"
+            >
+              Explore Solutions
+            </a>
           </div>
-        </div>
-      </section>
 
-      {/* --- FOOTER --- */}
-      <footer className="bg-brand-dark text-slate-400 py-12 border-t border-slate-800 text-sm">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-4 text-white cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-              <img
-                src="https://ik.imagekit.io/rrfyblezzy/conglomerate.png?updatedAt=1767572957486"
-                alt="Intella Fusion logo"
-                className="h-10 md:h-12 lg:h-14 object-contain"
-              />
-            </div>
-            <p className="max-w-xs mb-6">
-              The premium growth partner for service businesses. We turn websites into 24/7 sales assets.
-            </p>
-            <div className="flex gap-4">
-              {/* Social Placeholders */}
-              <div className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 cursor-pointer">In</div>
-              <div className="w-8 h-8 bg-slate-800 rounded flex items-center justify-center hover:bg-slate-700 cursor-pointer">X</div>
+          {/* Trust indicators */}
+          <div className="mt-12 pt-12 border-t border-slate-700">
+            <div className="flex justify-center items-center gap-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-brand-gold fill-brand-gold" />
+              ))}
+              <span className="ml-2 text-slate-400 text-sm">5.0 Average Rating</span>
             </div>
           </div>
-          
-          <div>
-            <h4 className="text-white font-bold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li><a href="#about" className="hover:text-brand-gold transition-colors">About Us</a></li>
-              <li><a href="#work" className="hover:text-brand-gold transition-colors">Case Studies</a></li>
-              <li><a href="#" className="hover:text-brand-gold transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-brand-gold transition-colors">Privacy Policy</a></li>
-            </ul>
-          </div>
+        </div>
+      </Section>
 
-          <div>
-            <h4 className="text-white font-bold mb-4">Contact</h4>
-            <ul className="space-y-2">
-              <li>intellafusion@gmail.com</li>
-              <li>(901) 236-5831</li>
-              <li>Memphis, TN</li>
-              <li className="pt-2"><a href="#" className="text-brand-gold hover:underline">Client Portal Login</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-900 flex justify-between items-center">
-          <div>&copy; {new Date().getFullYear()} IntellaFusion. All rights reserved.</div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

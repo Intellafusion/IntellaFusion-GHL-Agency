@@ -17,19 +17,18 @@ import { SolutionItem, CaseStudy, ProcessStep, Testimonial } from './types';
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#hero' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'Work', href: '#work' },
-  { label: 'Process', href: '#process' },
-  { label: 'About', href: '#about' },
+  { label: 'Solutions', href: '#solutions-page' },
+  { label: 'Work', href: '#work-page' },
+  { label: 'About', href: '#about-page' },
+  { label: 'Pricing', href: '#pricing-page' },
 ];
 
 export const SOLUTIONS: SolutionItem[] = [
   {
     id: 'web',
-    title: 'Conversion Website',
-    benefit: 'High-performance design built to convert visitors.',
-    features: ['Mobile-first architecture', 'Speed-optimized loading', 'Strategic CTA placement'],
+    title: 'Premium Website Design',
+    benefit: 'First impressions mean everything to prospects.',
+    features: ['Stand-out design that beats competitors', 'Trust-building visual cues & social proof', 'Speed-optimized mobile-first performance'],
     icon: MonitorSmartphone
   },
   {
@@ -83,9 +82,9 @@ export const SOLUTIONS: SolutionItem[] = [
   },
   {
     id: 'seo',
-    title: 'SEO Foundations',
-    benefit: 'Dominant local visibility.',
-    features: ['Technical SEO setup', 'Google Business Profile opt', 'Local citation building'],
+    title: 'LLM & SEO Optimization',
+    benefit: 'Rank across search engines and AI-powered discovery tools.',
+    features: ['ChatGPT & LLM indexing setup', 'Technical SEO & local rankings', 'Google Business Profile optimization'],
     icon: Search
   }
 ];
@@ -93,8 +92,8 @@ export const SOLUTIONS: SolutionItem[] = [
 export const PROCESS: ProcessStep[] = [
   {
     number: '01',
-    title: 'Strategy & Discovery',
-    description: 'We audit your current flow and design a custom conversion blueprint tailored to your service area.'
+    title: 'Discovery Call',
+    description: 'Short call to identify revenue gaps, highlight quick wins, and present a clear ROI roadmap.'
   },
   {
     number: '02',
@@ -147,24 +146,26 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    quote: "We didn't need another brochure website. We needed a machine that actually booked appointments. IntellaFusion delivered exactly that.",
-    author: "Dr. Sarah Chen",
-    role: "Founder",
-    company: "Lumina Dental"
+    quote: "We didn't need another brochure website. We needed a classy, professional website. IntellaFusion delivered exactly that.",
+    author: "Bill Burke.",
+    role: "Politician",
+    company: "ElectBillBurke.com",
+    image: "https://ik.imagekit.io/rrfyblezzy/ChatGPT%20Image%20Dec%2027,%202025,%2012_41_31%20PM.png?updatedAt=1766867491055"
   },
   {
     id: '2',
     quote: "The missed call text-back feature alone paid for the entire system in the first week. It's calm, professional, and efficient.",
-    author: "Mark Reynolds",
-    role: "Owner",
-    company: "Reynolds Contracting"
+    author: "Tailor Geeting",
+    role: "Chief Flight Advisor",
+    company: "Private Pilot AI",
+    image: "https://ik.imagekit.io/rrfyblezzy/Untitled%20design%20(19).png?updatedAt=1750883259348"
   }
 ];
 
 export const FAQS = [
   {
     q: "Is this just a website design service?",
-    a: "No. While we build beautiful, high-speed websites, our core value is the 'Conversion Engine'—the backend automation system that captures leads, follows up instantly, and manages your reputation."
+    a: "While we do build beautiful, high-speed websites, our core value is the 'Conversion Engine'—the backend automation system that captures leads, follows up instantly, and manages your reputation."
   },
   {
     q: "Do I need to hire a marketing person to run this?",
@@ -172,10 +173,10 @@ export const FAQS = [
   },
   {
     q: "How long does implementation take?",
-    a: "From the Strategy Call to Launch Day, our typical timeline is 3-4 weeks for a full buildout. System-only installations can happen faster."
+    a: "From the Discovery Call to Launch Day, our typical timeline is 2-4 weeks for a full buildout. System-only installations can happen faster."
   },
   {
     q: "Does it integrate with my current booking software?",
-    a: "Yes. We integrate with most major scheduling platforms (Calendly, ServiceTitan, JaneApp, etc.) to ensure a seamless flow between lead capture and appointment booking."
+    a: "Yes. We integrate with most major scheduling platforms (Calendly, Google Calendar, Outlook, iCloud, etc...) to ensure a seamless flow between lead capture and appointment booking."
   }
 ];
