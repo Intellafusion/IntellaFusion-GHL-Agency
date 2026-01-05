@@ -20,13 +20,12 @@ function Pricing() {
   };
 
   const premiumFeatures = [
-    { icon: Code, text: "Custom-designed premium website" },
+    { icon: Code, text: "Custom-coded & designed website" },
     { icon: Settings, text: "Mobile-responsive design" },
     { icon: Shield, text: "SSL security & HTTPS" },
     { icon: Clock, text: "Professional hosting included" },
     { icon: MessageSquare, text: "Monthly maintenance & updates" },
-    { icon: Phone, text: "Monthly strategy call" },
-    { icon: BarChart, text: "Basic analytics setup" },
+    { icon: Phone, text: "Monthly update call" },
     { icon: Award, text: "Brand-aligned design" }
   ];
 
@@ -37,11 +36,10 @@ function Pricing() {
     { icon: Users, text: "Intelligent lead routing & assignment" },
     { icon: MessageSquare, text: "Multi-channel follow-up automation" },
     { icon: Phone, text: "Smart call routing & tracking" },
-    { icon: BarChart, text: "Advanced analytics & ROI dashboard" },
+    { icon: BarChart, text: "Advanced analytics dashboard" },
     { icon: Settings, text: "CRM integration & sync" },
     { icon: Shield, text: "White-glove implementation & training" },
     { icon: Award, text: "Priority support & optimization" },
-    { icon: Clock, text: "Quarterly strategy sessions" },
     { icon: TrendingUp, text: "Ongoing conversion optimization" }
   ];
 
@@ -110,7 +108,7 @@ function Pricing() {
             >
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Premium Website</h3>
-                <p className="text-slate-600">Perfect for businesses establishing their online presence</p>
+                <p className="text-slate-600">Perfect for businesses establishing dominance over competitors</p>
               </div>
 
               <div className="mb-8 bg-slate-50 rounded-2xl p-6 border-2 border-slate-100">
@@ -127,16 +125,16 @@ function Pricing() {
                     <span className="text-4xl font-bold text-brand-gold">$49</span>
                     <span className="text-slate-600 text-lg">/month</span>
                   </div>
-                  <p className="text-sm text-slate-600 leading-relaxed">Includes hosting, maintenance, and monthly strategy calls</p>
+                  <p className="text-sm text-slate-600 leading-relaxed">Includes hosting, maintenance, and monthly update calls</p>
                 </div>
               </div>
 
               <a 
-                href="/#contact"
-                onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
-                className="w-full block text-center px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors mb-8"
+                href="#contact-page"
+                onClick={(e) => { e.preventDefault(); window.location.hash = 'contact-page'; }}
+                className="w-full block text-center px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors mb-8 flex items-center justify-center gap-2"
               >
-                Get Started
+                Get Started <ArrowRight className="w-5 h-5" />
               </a>
 
               <div className="space-y-4">
@@ -190,8 +188,8 @@ function Pricing() {
               </div>
 
               <a 
-                href="/#contact"
-                onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
+                href="#contact-page"
+                onClick={(e) => { e.preventDefault(); window.location.hash = 'contact-page'; }}
                 className="w-full block text-center px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors shadow-xl mb-8 flex items-center justify-center gap-2"
               >
                 Get Started <ArrowRight className="w-5 h-5" />
@@ -290,18 +288,18 @@ function Pricing() {
                 <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
               </summary>
               <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
-                Premium Websites typically launch in 2-3 weeks. The full Conversion Engine implementation takes 4-6 weeks, 
-                including custom configuration, integration, testing, and team training. We prioritize quality over speed.
+                Premium Websites typically launch in 1-2 weeks. The full Conversion Engine implementation takes 1-2 weeks, 
+                including custom configuration, integration, testing, and team training. In total, expected implementation time is 2-3 weeks, however We prioritize quality over speed.
               </div>
             </details>
 
             <details className="group bg-white border border-slate-200 rounded-lg overflow-hidden">
               <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-50 group-open:bg-white transition-colors">
-                <h4 className="font-semibold text-slate-800">Can I upgrade from Premium Website to Conversion Engine later?</h4>
+                <h4 className="font-semibold text-slate-800">Can I upgrade my Premium Website to Conversion Engine later?</h4>
                 <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
               </summary>
               <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
-                Absolutely! Many clients start with the Premium Website and upgrade once they see the results. 
+                Absolutely! Many clients start with the Premium Website and upgrade after seeing deliverables. 
                 We'll apply your initial investment toward the upgrade and get your conversion systems running quickly.
               </div>
             </details>
@@ -314,18 +312,18 @@ function Pricing() {
               <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
                 The monthly fee covers hosting, maintenance, updates, support, and ongoing optimization. 
                 For Conversion Engine clients, this also includes system monitoring, integration maintenance, 
-                and quarterly strategy sessions to ensure your systems continue delivering results.
+                training, and anything else you may need support with.
               </div>
             </details>
 
             <details className="group bg-white border border-slate-200 rounded-lg overflow-hidden">
               <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-50 group-open:bg-white transition-colors">
-                <h4 className="font-semibold text-slate-800">Do you offer payment plans?</h4>
+                <h4 className="font-semibold text-slate-800">Am I locked into any contracts?</h4>
                 <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
               </summary>
               <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">
-                Yes! We offer flexible payment options for both packages. Discuss your needs on our discovery call, 
-                and we'll work out a structure that makes sense for your business.
+                No! While inital development requires a one-time setup fee, our monthly services are month-to-month with no long-term contracts.
+                You can cancel anytime with 30 days notice.
               </div>
             </details>
           </div>

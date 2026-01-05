@@ -165,7 +165,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FAQS = [
   {
     q: "Is this just a website design service?",
-    a: "No. While we build beautiful, high-speed websites, our core value is the 'Conversion Engine'—the backend automation system that captures leads, follows up instantly, and manages your reputation."
+    a: "While we do build beautiful, high-speed websites, our core value is the 'Conversion Engine'—the backend automation system that captures leads, follows up instantly, and manages your reputation."
   },
   {
     q: "Do I need to hire a marketing person to run this?",
@@ -173,10 +173,10 @@ export const FAQS = [
   },
   {
     q: "How long does implementation take?",
-    a: "From the Strategy Call to Launch Day, our typical timeline is 3-4 weeks for a full buildout. System-only installations can happen faster."
+    a: "From the Discovery Call to Launch Day, our typical timeline is 2-4 weeks for a full buildout. System-only installations can happen faster."
   },
   {
     q: "Does it integrate with my current booking software?",
-    a: "Yes. We integrate with most major scheduling platforms (Calendly, ServiceTitan, JaneApp, etc.) to ensure a seamless flow between lead capture and appointment booking."
+    a: "Yes. We integrate with most major scheduling platforms (Calendly, Google Calendar, Outlook, iCloud, etc...) to ensure a seamless flow between lead capture and appointment booking."
   }
 ];
