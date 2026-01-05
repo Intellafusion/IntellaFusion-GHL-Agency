@@ -18,10 +18,9 @@ import { SolutionItem, CaseStudy, ProcessStep, Testimonial } from './types';
 export const NAV_LINKS = [
   { label: 'Home', href: '#hero' },
   { label: 'Solutions', href: '#solutions-page' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'Work', href: '#work' },
-  { label: 'Process', href: '#process' },
-  { label: 'About', href: '#about' },
+  { label: 'Work', href: '#work-page' },
+  { label: 'About', href: '#about-page' },
+  { label: 'Pricing', href: '#pricing-page' },
 ];
 
 export const SOLUTIONS: SolutionItem[] = [
@@ -93,8 +92,8 @@ export const SOLUTIONS: SolutionItem[] = [
 export const PROCESS: ProcessStep[] = [
   {
     number: '01',
-    title: 'Strategy & Discovery',
-    description: 'We audit your current flow and design a custom conversion blueprint tailored to your service area.'
+    title: 'Discovery Call',
+    description: 'Short call to identify revenue gaps, highlight quick wins, and present a clear ROI roadmap.'
   },
   {
     number: '02',

@@ -466,24 +466,74 @@ function App() {
       </Section>
 
       {/* --- TESTIMONIALS --- */}
-      <Section className="bg-slate-50 border-y border-slate-200">
-        <div className="max-w-4xl mx-auto">
+      <Section className="bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-brand-gold/5 blur-[100px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-brand-gold font-semibold tracking-wider text-sm uppercase">Client Success Stories</span>
+            <h2 className="text-3xl lg:text-4xl font-serif font-medium text-slate-900 mt-2 mb-4">
+              Trusted by Industry Leaders
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Real businesses. Real results. See what our partners have to say about their transformation.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {TESTIMONIALS.map((t) => (
-              <div key={t.id} className="bg-white p-8 rounded-xl shadow-sm relative">
-                <div className="text-brand-gold text-4xl font-serif absolute top-4 left-4 opacity-20">"</div>
-                <p className="text-slate-700 italic mb-6 relative z-10">{t.quote}</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500 font-bold">
+              <motion.div 
+                key={t.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="bg-white p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-xl border border-slate-100 relative group transition-all duration-300"
+              >
+                {/* Decorative quote mark */}
+                <div className="absolute top-6 right-6 text-brand-gold/10 group-hover:text-brand-gold/20 transition-colors">
+                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 32 32">
+                    <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                  </svg>
+                </div>
+
+                {/* Quote */}
+                <p className="text-slate-700 text-lg leading-relaxed mb-8 relative z-10 italic">
+                  "{t.quote}"
+                </p>
+
+                {/* Author info */}
+                <div className="flex items-center gap-4 pt-6 border-t border-slate-100">
+                  <div className="w-14 h-14 bg-gradient-to-br from-brand-navy to-brand-gold rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md">
                     {t.author.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-bold text-slate-900 text-sm">{t.author}</div>
-                    <div className="text-xs text-slate-500">{t.role}, {t.company}</div>
+                    <div className="font-bold text-slate-900 text-base">{t.author}</div>
+                    <div className="text-sm text-slate-500">{t.role}</div>
+                    <div className="text-xs text-brand-gold font-semibold mt-0.5">{t.company}</div>
                   </div>
                 </div>
-              </div>
+
+                {/* Hover accent line */}
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </motion.div>
             ))}
+          </div>
+
+          {/* Trust badges or CTA */}
+          <div className="text-center mt-12">
+            <p className="text-sm text-slate-500 mb-4">Join 50+ premium service businesses growing with IntellaFusion</p>
+            <div className="flex justify-center items-center gap-8 flex-wrap">
+              {[...Array(5)].map((_, i) => (
+                <div key={i} className="text-brand-gold flex items-center">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              ))}
+              <span className="text-xs font-semibold text-slate-600 uppercase tracking-wider">5.0 Average Rating</span>
+            </div>
           </div>
         </div>
       </Section>

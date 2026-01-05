@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import Solutions from './pages/Solutions';
+import Work from './pages/Work';
+import About from './pages/About';
+import Pricing from './pages/Pricing';
 
 function Router() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -11,6 +14,12 @@ function Router() {
       const hash = window.location.hash.slice(1);
       if (hash === 'solutions-page') {
         setCurrentPage('solutions');
+      } else if (hash === 'work-page') {
+        setCurrentPage('work');
+      } else if (hash === 'about-page') {
+        setCurrentPage('about');
+      } else if (hash === 'pricing-page') {
+        setCurrentPage('pricing');
       } else {
         setCurrentPage('home');
       }
@@ -30,6 +39,18 @@ function Router() {
 
   if (currentPage === 'solutions') {
     return <Solutions />;
+  }
+  
+  if (currentPage === 'work') {
+    return <Work />;
+  }
+  
+  if (currentPage === 'about') {
+    return <About />;
+  }
+  
+  if (currentPage === 'pricing') {
+    return <Pricing />;
   }
   
   return <App />;
