@@ -202,10 +202,10 @@ function App() {
       {/* --- TRUST STRIP --- */}
       <div className="bg-white border-y-4 border-brand-gold relative z-20">
         <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-center divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-4 items-center justify-center divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
             
-            <div className="flex items-center justify-center gap-4 px-4">
-              <div className="p-3 bg-brand-gold/10 rounded-xl text-brand-gold">
+            <div className="flex items-center gap-4 px-0 sm:px-4 pt-0 first:pt-0">
+              <div className="p-3 bg-brand-gold/10 rounded-xl text-brand-gold flex-shrink-0">
                 <Clock className="w-6 h-6" />
               </div>
               <div className="text-left">
@@ -214,8 +214,8 @@ function App() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-4 px-4">
-              <div className="p-3 bg-brand-gold/10 rounded-xl text-brand-gold">
+            <div className="flex items-center gap-4 px-0 sm:px-4 pt-4 sm:pt-0">
+              <div className="p-3 bg-brand-gold/10 rounded-xl text-brand-gold flex-shrink-0">
                 <PhoneMissed className="w-6 h-6" />
               </div>
               <div className="text-left">
@@ -224,8 +224,8 @@ function App() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-4 px-4">
-              <div className="p-3 bg-brand-gold/10 rounded-xl text-brand-gold">
+            <div className="flex items-center gap-4 px-0 sm:px-4 pt-4 sm:pt-0">
+              <div className="p-3 bg-brand-gold/10 rounded-xl text-brand-gold flex-shrink-0">
                 <BarChart3 className="w-6 h-6" />
               </div>
               <div className="text-left">
@@ -234,8 +234,8 @@ function App() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-4 px-4">
-               <div className="p-3 bg-brand-gold/10 rounded-xl text-brand-gold">
+            <div className="flex items-center gap-4 px-0 sm:px-4 pt-4 sm:pt-0">
+               <div className="p-3 bg-brand-gold/10 rounded-xl text-brand-gold flex-shrink-0">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div className="text-left">
@@ -546,9 +546,12 @@ function App() {
       <footer className="bg-brand-dark text-slate-400 py-12 border-t border-slate-800 text-sm">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-4 text-white">
-              <div className="w-6 h-6 bg-brand-gold rounded-br-lg rounded-tl-lg"></div>
-              <span className="font-serif font-bold text-xl">IntellaFusion</span>
+            <div className="flex items-center gap-3 mb-4 text-white cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+              <img
+                src="https://ik.imagekit.io/rrfyblezzy/conglomerate.png?updatedAt=1767572957486"
+                alt="Intella Fusion logo"
+                className="h-10 md:h-12 lg:h-14 object-contain"
+              />
             </div>
             <p className="max-w-xs mb-6">
               The premium growth partner for service businesses. We turn websites into 24/7 sales assets.
@@ -573,8 +576,9 @@ function App() {
           <div>
             <h4 className="text-white font-bold mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li>hello@intellafusion.com</li>
-              <li>(555) 123-4567</li>
+              <li>intellafusion@gmail.com</li>
+              <li>(901) 236-5831</li>
+              <li>Memphis, TN</li>
               <li className="pt-2"><a href="#" className="text-brand-gold hover:underline">Client Portal Login</a></li>
             </ul>
           </div>

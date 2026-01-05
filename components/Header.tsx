@@ -27,11 +27,12 @@ const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-          <div className="w-8 h-8 bg-brand-gold rounded-br-xl rounded-tl-xl"></div>
-          <span className={`font-serif text-2xl font-bold tracking-tight ${isScrolled || mobileMenuOpen ? 'text-white' : 'text-white'}`}>
-            Intella<span className="text-brand-gold">Fusion</span>
-          </span>
+        <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+          <img
+            src="https://ik.imagekit.io/rrfyblezzy/conglomerate.png?updatedAt=1767572957486"
+            alt="Intella Fusion logo"
+            className="h-10 md:h-12 lg:h-14 object-contain"
+          />
         </div>
 
         {/* Desktop Nav */}
