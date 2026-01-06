@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
-import { ArrowRight, Check, Star, Zap, Phone, Code, TrendingUp, Users, Shield, Settings, MessageSquare, BarChart, Clock, Award, ChevronDown } from 'lucide-react';
+import { ArrowRight, Check, Star, Zap, Phone, Code, TrendingUp, Users, Shield, Settings, MessageSquare, BarChart, Clock, Award, ChevronDown, Sparkles, Eye, Target, Crown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function Pricing() {
@@ -21,12 +21,16 @@ function Pricing() {
 
   const premiumFeatures = [
     { icon: Code, text: "Custom-coded & designed website" },
+    { icon: Crown, text: "Establishes authority and credibility" },
     { icon: Settings, text: "Mobile-responsive design" },
+    { icon: Eye, text: "Creates lasting first impression" },
     { icon: Shield, text: "SSL security & HTTPS" },
+    { icon: Sparkles, text: "Elevated brand professionalism" },
     { icon: Clock, text: "Professional hosting included" },
     { icon: MessageSquare, text: "Monthly maintenance & updates" },
-    { icon: Phone, text: "Monthly update call" },
-    { icon: Award, text: "Brand-aligned design" }
+    { icon: Award, text: "Brand-aligned design that builds trust" },
+    { icon: Phone, text: "Monthly strategy & update call" },
+    { icon: TrendingUp, text: "Foundation for long-term growth" }
   ];
 
   const conversionFeatures = [
@@ -104,14 +108,17 @@ function Pricing() {
             {/* Premium Website Package */}
             <motion.div 
               variants={itemVariants}
-              className="bg-white rounded-3xl shadow-lg border-2 border-slate-200 p-8 lg:p-10 hover:shadow-2xl transition-all duration-300"
+              className="bg-white rounded-3xl shadow-xl border-2 border-slate-300 p-8 lg:p-10 hover:shadow-2xl hover:border-slate-400 transition-all duration-300 relative overflow-hidden"
             >
+              {/* Subtle accent decoration */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-slate-400 via-slate-300 to-slate-400" />
+              
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Premium Website</h3>
-                <p className="text-slate-600">Perfect for businesses establishing dominance over competitors</p>
+                <p className="text-slate-600">Professional web presence that establishes credibility and trust</p>
               </div>
 
-              <div className="mb-8 bg-slate-50 rounded-2xl p-6 border-2 border-slate-100">
+              <div className="mb-8 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border-2 border-slate-200 shadow-sm">
                 <div className="mb-6">
                   <p className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-2">Setup Fee</p>
                   <div className="flex items-baseline gap-2">
@@ -119,10 +126,10 @@ function Pricing() {
                     <span className="text-slate-600 text-lg">one-time</span>
                   </div>
                 </div>
-                <div className="border-t border-slate-200 pt-6">
+                <div className="border-t border-slate-300 pt-6">
                   <p className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-2">Monthly Service</p>
                   <div className="flex items-baseline gap-2 mb-3">
-                    <span className="text-4xl font-bold text-brand-gold">$49</span>
+                    <span className="text-4xl font-bold text-slate-900">$49</span>
                     <span className="text-slate-600 text-lg">/month</span>
                   </div>
                   <p className="text-sm text-slate-600 leading-relaxed">Includes hosting, maintenance, and monthly update calls</p>
@@ -132,7 +139,7 @@ function Pricing() {
               <a 
                 href="#contact-page"
                 onClick={(e) => { e.preventDefault(); window.location.hash = 'contact-page'; }}
-                className="w-full block text-center px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors mb-8 flex items-center justify-center gap-2"
+                className="w-full block text-center px-8 py-4 bg-gradient-to-r from-slate-800 to-slate-900 text-white font-bold rounded-xl hover:from-slate-900 hover:to-slate-800 transition-all shadow-lg hover:shadow-xl mb-8 flex items-center justify-center gap-2"
               >
                 Get Started <ArrowRight className="w-5 h-5" />
               </a>
@@ -141,13 +148,16 @@ function Pricing() {
                 <p className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">What's Included:</p>
                 {premiumFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <feature.icon className="w-3 h-3 text-slate-600" />
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center flex-shrink-0 mt-0.5 border border-slate-300">
+                      <feature.icon className="w-3 h-3 text-slate-700" />
                     </div>
                     <span className="text-slate-700 leading-relaxed">{feature.text}</span>
                   </div>
                 ))}
               </div>
+
+              {/* Subtle decorative element */}
+              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-slate-200/30 rounded-full blur-3xl pointer-events-none" />
             </motion.div>
 
             {/* Conversion Engine Package - Best Value */}
@@ -254,7 +264,7 @@ function Pricing() {
                 <TrendingUp className="w-8 h-8 text-brand-gold" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">Proven ROI</h3>
-              <p className="text-sm text-slate-400">Our systems have helped businesses reduce costs by 60% and increase conversions by 200%.</p>
+              <p className="text-sm text-slate-400">Businesses see measurable results within weeks with more qualified leads and significantly higher conversion rates.</p>
             </motion.div>
           </motion.div>
         </div>
@@ -337,12 +347,11 @@ function Pricing() {
             Ready to Start Capturing Every Opportunity?
           </h2>
           <p className="text-lg text-slate-400 mb-10 leading-relaxed">
-            Book a strategy call with August to discuss your business goals and find the perfect solution. 
-            No pressure, no hard sales—just honest advice from someone who understands what it takes to scale.
+            These results aren't accidents—they're the outcome of a proven system. Book a discovery call and let's map out how we can transform your business with a custom conversion engine.
           </p>
           <a 
-            href="/#contact"
-            onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
+            href="#contact-page"
+            onClick={(e) => { e.preventDefault(); window.location.hash = 'contact-page'; }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors shadow-xl"
           >
             Book Your Discovery Call <ArrowRight className="w-5 h-5" />

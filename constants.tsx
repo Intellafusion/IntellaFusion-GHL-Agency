@@ -117,29 +117,60 @@ export const INDUSTRIES = [
 export const CASE_STUDIES: CaseStudy[] = [
   {
     id: '1',
-    client: 'Apex Aesthetics',
-    industry: 'Med Spa',
-    problem: 'High traffic but low booking rate. Slow follow-up on weekend leads.',
+    client: 'ElectBillBurke.com',
+    industry: 'Political Campaign',
+    problem: 'Needed a credible campaign website that reliably turns supporters into sign-ups and volunteers.',
     solution: 'New conversion site + 24/7 SMS concierge.',
-    outcome: 'Doubled consultation bookings in 90 days.',
+    outcome: 'Doubled voter sign-ups in a week.',
     stats: [
       { label: 'Lead Response', value: '< 2 mins' },
-      { label: 'Bookings', value: '+114%' }
+      { label: 'Voting Registration', value: '+114%' }
     ],
-    image: 'https://picsum.photos/600/400?random=1'
+    image: 'https://ik.imagekit.io/rrfyblezzy/View%202.png',
+    website: 'https://electbillburke.com',
+    images: [
+      'https://ik.imagekit.io/rrfyblezzy/bill%201.png',
+      'https://ik.imagekit.io/rrfyblezzy/bill%202.png',
+      'https://ik.imagekit.io/rrfyblezzy/bill%203.png',
+      'https://ik.imagekit.io/rrfyblezzy/bill%204.png',
+      'https://ik.imagekit.io/rrfyblezzy/bill%205.png' 
+    ],
+    deliverables: [
+      'Professional campaign website with conversion-optimized design',
+      '24/7 SMS concierge system for supporter engagement',
+      'Automated volunteer registration and follow-up workflows',
+      'Email and SMS campaign automation',
+      'Real-time analytics dashboard'
+    ]
   },
   {
     id: '2',
-    client: 'Elite HVAC Systems',
-    industry: 'Home Services',
-    problem: 'Missing calls while on job sites. Poor Google Review volume.',
-    solution: 'Missed Call Text-Back + Automated Review Flow.',
-    outcome: 'Recovered 12 jobs/month from missed calls.',
+    client: 'Private Pilot AI',
+    industry: 'SaaS / Aviation',
+    problem: 'needs a premium, conversion-focused website and funnel that turns traffic into paid customers. Bottlenecked by scattered lead capture, weak follow-up, and limited visibility.',
+    solution: 'Reactivation Flow & Missed Call Text-Back.',
+    outcome: 'Supercharged their lead generation.',
     stats: [
-      { label: 'Recovered Rev', value: '$45k/mo' },
-      { label: 'Google Reviews', value: '4.2 → 4.9' }
+      { label: 'Appointment Booking Rate', value: '4% → 29%' },
+      { label: 'SMS Response Rate', value: '8% → 22%' }
     ],
-    image: 'https://picsum.photos/600/400?random=2'
+    image: 'https://ik.imagekit.io/rrfyblezzy/view.png',
+    website: 'https://privatepilotai.com',
+    images: [
+      'https://ik.imagekit.io/rrfyblezzy/view.png',
+      'https://ik.imagekit.io/rrfyblezzy/ppai%206.png',
+      'https://ik.imagekit.io/rrfyblezzy/ppai%202.png',
+      'https://ik.imagekit.io/rrfyblezzy/ppai%203.png',
+      'https://ik.imagekit.io/rrfyblezzy/ppai%204.png',
+      'https://ik.imagekit.io/rrfyblezzy/ppai%205.png'
+    ],
+    deliverables: [
+      'Premium conversion-focused website design',
+      'Automated lead capture and qualification system',
+      'Missed call text-back automation',
+      'Customer reactivation workflow',
+      'Unified inbox for all communications'
+    ]
   }
 ];
 
