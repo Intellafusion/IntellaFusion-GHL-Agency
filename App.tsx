@@ -450,6 +450,16 @@ function App() {
                   <div className="p-6 flex-1 flex flex-col">
                     <div className="flex-grow">
                       <h3 className="text-xl font-bold mb-2">{study.client}</h3>
+                      {study.website && (
+                        <a 
+                          href={study.website} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-xs text-brand-gold font-semibold hover:underline mb-4 inline-flex items-center gap-1"
+                        >
+                          Visit Website <ArrowRight className="w-3 h-3" />
+                        </a>
+                      )}
                       <div className="text-xs text-slate-500 mb-4 font-mono">PROBLEM: {study.problem}</div>
                     </div>
 
