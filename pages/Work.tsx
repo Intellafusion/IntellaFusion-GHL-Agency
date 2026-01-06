@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
-import { ArrowRight, TrendingUp, Clock, Star, X } from 'lucide-react';
+import { ArrowRight, TrendingUp, Clock, Star, X, ChevronLeft, ChevronRight, Check } from 'lucide-react';
 import { CASE_STUDIES } from '../constants';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CaseStudy } from '../types';
 
 function Work() {
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -95,7 +96,7 @@ function Work() {
             <motion.div 
               key={study.id}
               variants={itemVariants}
-              className="bg-white rounded-2xl border-2 border-slate-100 overflow-hidden hover:border-brand-gold/30 hover:shadow-xl transition-all duration-300 group"
+              className="bg-white rounded-2xl border-2 border-slate-100 overflow-hidden hover:border-brand-gold/30 hover:shadow-xl transition-all duration-300 group flex flex-col h-full"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
@@ -113,21 +114,21 @@ function Work() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-gold transition-colors">
                   {study.client}
                 </h3>
                 
-                <p className="text-sm text-slate-600 mb-4 line-clamp-2">
+                <p className="text-sm text-slate-600 mb-4 flex-grow line-clamp-2">
                   {study.outcome}
                 </p>
 
                 {/* Stats Preview */}
                 <div className="grid grid-cols-2 gap-3 mb-4">
                   {study.stats.map((stat, idx) => (
-                    <div key={idx} className="bg-slate-50 p-3 rounded-lg">
-                      <div className="text-xs text-slate-500 mb-1">{stat.label}</div>
-                      <div className="text-lg font-bold text-brand-gold">{stat.value}</div>
+                    <div key={idx} className="bg-slate-50 p-3 rounded-lg h-20 flex flex-col">
+                      <div className="text-xs text-slate-500 flex-shrink-0 h-4">{stat.label}</div>
+                      <div className="text-lg font-bold text-brand-gold mt-auto">{stat.value}</div>
                     </div>
                   ))}
                 </div>
@@ -135,7 +136,7 @@ function Work() {
                 {/* Read More Button */}
                 <button
                   onClick={() => setSelectedCase(study)}
-                  className="w-full text-sm font-bold text-slate-600 hover:text-brand-gold flex items-center justify-center gap-2 py-2 border-t border-slate-100 transition-colors"
+                  className="w-full text-sm font-bold text-slate-600 hover:text-brand-gold flex items-center justify-center gap-2 py-2 border-t border-slate-100 transition-colors mt-auto"
                 >
                   Read Full Case Study <ArrowRight className="w-4 h-4" />
                 </button>
@@ -152,7 +153,10 @@ function Work() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedCase(null)}
+            onClick={() => {
+              setSelectedCase(null);
+              setCurrentImageIndex(0);
+            }}
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           >
             <motion.div
@@ -160,87 +164,141 @@ function Work() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-white rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto relative"
             >
               {/* Close button */}
               <button
-                onClick={() => setSelectedCase(null)}
-                className="absolute top-4 right-4 w-10 h-10 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center transition-colors"
+                onClick={() => {
+                  setSelectedCase(null);
+                  setCurrentImageIndex(0);
+                }}
+                className="absolute top-6 right-6 z-10 w-10 h-10 bg-white/95 backdrop-blur-sm hover:bg-slate-100 rounded-full flex items-center justify-center transition-colors shadow-lg"
               >
                 <X className="w-5 h-5 text-slate-600" />
               </button>
 
-              {/* Modal Content */}
-              <div className="relative">
-                {/* Header Image */}
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={selectedCase.image} 
-                    alt={selectedCase.client}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/50 to-transparent" />
-                  
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="inline-block px-3 py-1 bg-white/95 backdrop-blur-sm rounded-full mb-3">
-                      <span className="text-xs font-bold text-brand-navy uppercase tracking-wider">
-                        {selectedCase.industry}
-                      </span>
+              {/* Image Gallery */}
+              <div className="relative bg-slate-900 overflow-hidden flex items-center justify-center" style={{ minHeight: '500px' }}>
+                <img 
+                  src={selectedCase.images?.[currentImageIndex] || selectedCase.image}
+                  alt={`${selectedCase.client} - Image ${currentImageIndex + 1}`}
+                  className="w-full h-full object-contain"
+                />
+                
+                {/* Gallery Navigation */}
+                {selectedCase.images && selectedCase.images.length > 1 && (
+                  <>
+                    <button
+                      onClick={() => setCurrentImageIndex((prev) => 
+                        prev === 0 ? selectedCase.images!.length - 1 : prev - 1
+                      )}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/95 backdrop-blur-sm hover:bg-white rounded-full flex items-center justify-center transition-all shadow-lg"
+                    >
+                      <ChevronLeft className="w-6 h-6 text-slate-800" />
+                    </button>
+                    
+                    <button
+                      onClick={() => setCurrentImageIndex((prev) => 
+                        prev === selectedCase.images!.length - 1 ? 0 : prev + 1
+                      )}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/95 backdrop-blur-sm hover:bg-white rounded-full flex items-center justify-center transition-all shadow-lg"
+                    >
+                      <ChevronRight className="w-6 h-6 text-slate-800" />
+                    </button>
+
+                    {/* Image Indicators */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                      {selectedCase.images.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setCurrentImageIndex(idx)}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            idx === currentImageIndex 
+                              ? 'bg-white w-8' 
+                              : 'bg-white/50 hover:bg-white/75'
+                          }`}
+                        />
+                      ))}
                     </div>
-                    <h2 className="text-4xl font-serif text-white">{selectedCase.client}</h2>
-                  </div>
+                  </>
+                )}
+
+                {/* Industry Badge */}
+                <div className="absolute top-6 left-6 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg">
+                  <span className="text-xs font-bold text-brand-navy uppercase tracking-wider">
+                    {selectedCase.industry}
+                  </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-8 lg:p-12 space-y-10">
+                {/* Header */}
+                <div className="border-b border-slate-200 pb-6">
+                  <h2 className="text-4xl font-serif text-slate-900 mb-2">{selectedCase.client}</h2>
+                  {selectedCase.website && (
+                    <a 
+                      href={selectedCase.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-brand-gold hover:text-amber-600 font-semibold text-sm mb-3 transition-colors"
+                    >
+                      Visit Website →
+                    </a>
+                  )}
+                  <p className="text-lg text-slate-600">{selectedCase.outcome}</p>
                 </div>
 
-                {/* Body */}
-                <div className="p-8 space-y-8">
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 gap-4">
-                    {selectedCase.stats.map((stat, idx) => (
-                      <div key={idx} className="bg-gradient-to-br from-slate-50 to-slate-100 p-6 rounded-xl border border-slate-200">
-                        <div className="text-xs text-slate-500 uppercase tracking-wider mb-2">{stat.label}</div>
-                        <div className="text-4xl font-bold text-brand-gold">{stat.value}</div>
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  {selectedCase.stats.map((stat, idx) => (
+                    <div 
+                      key={idx} 
+                      className="bg-gradient-to-br from-slate-50 to-slate-100/50 p-6 rounded-xl border border-slate-200"
+                    >
+                      <div className="text-xs text-slate-500 uppercase tracking-wider mb-2 font-semibold">
+                        {stat.label}
                       </div>
-                    ))}
-                  </div>
+                      <div className="text-3xl font-bold text-brand-gold">{stat.value}</div>
+                    </div>
+                  ))}
+                </div>
 
-                  {/* Challenge */}
-                  <div>
-                    <h3 className="text-sm font-bold text-red-600 uppercase tracking-wider mb-3 flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-red-600" />
+                {/* Challenge Section */}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-slate-600" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 uppercase tracking-wide">
                       The Challenge
                     </h3>
-                    <p className="text-slate-700 leading-relaxed">{selectedCase.problem}</p>
                   </div>
-
-                  {/* Solution */}
-                  <div>
-                    <h3 className="text-sm font-bold text-blue-600 uppercase tracking-wider mb-3 flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-                      Our Solution
-                    </h3>
-                    <p className="text-slate-700 leading-relaxed">{selectedCase.solution}</p>
-                  </div>
-
-                  {/* Outcome */}
-                  <div>
-                    <h3 className="text-sm font-bold text-green-600 uppercase tracking-wider mb-3 flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-600" />
-                      The Result
-                    </h3>
-                    <p className="text-slate-900 font-semibold text-lg leading-relaxed">{selectedCase.outcome}</p>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="pt-6 border-t border-slate-200">
-                    <a 
-                      href="/#contact"
-                      onClick={(e) => { e.preventDefault(); setSelectedCase(null); window.location.href = '/#contact'; }}
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors"
-                    >
-                      Get Similar Results <ArrowRight className="w-5 h-5" />
-                    </a>
-                  </div>
+                  <p className="text-slate-700 leading-relaxed pl-11">{selectedCase.problem}</p>
                 </div>
+
+                {/* Deliverables Section */}
+                {selectedCase.deliverables && selectedCase.deliverables.length > 0 && (
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-brand-gold/10 flex items-center justify-center">
+                        <div className="w-2 h-2 rounded-full bg-brand-gold" />
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-900 uppercase tracking-wide">
+                        What We Delivered
+                      </h3>
+                    </div>
+                    <ul className="space-y-3 pl-11">
+                      {selectedCase.deliverables.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-slate-700">
+                          <Check className="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
               </div>
             </motion.div>
           </motion.div>
@@ -259,8 +317,8 @@ function Work() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="#hero"
-              onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
+              href="#contact-page"
+              onClick={(e) => { e.preventDefault(); window.location.hash = 'contact-page'; }}
               className="px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-xl"
             >
               Book Your Discovery Call <ArrowRight className="w-5 h-5" />

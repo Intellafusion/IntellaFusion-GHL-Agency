@@ -441,18 +441,22 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {CASE_STUDIES.map((study) => (
                 <div key={study.id} className="bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full">
-                  <div className="h-48 bg-slate-200 relative">
-                     <img src={study.image} alt={study.client} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                  <div className="h-48 bg-slate-200 relative overflow-hidden">
+                     <img src={study.image} alt={study.client} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold text-brand-navy">
                        {study.industry}
                      </div>
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-xl font-bold mb-2">{study.client}</h3>
-                    <div className="text-xs text-slate-500 mb-4 font-mono">PROBLEM: {study.problem}</div>
-                    <div className="text-sm text-slate-700 mb-6 flex-1">
+                    <div className="flex-grow">
+                      <h3 className="text-xl font-bold mb-2">{study.client}</h3>
+                      <div className="text-xs text-slate-500 mb-4 font-mono">PROBLEM: {study.problem}</div>
+                    </div>
+
+                    <div className="text-sm text-slate-700 mb-6">
                       <span className="font-semibold text-brand-gold">Solution:</span> {study.solution}
                     </div>
+
                     <div className="grid grid-cols-2 gap-4 border-t border-slate-100 pt-4 mt-auto">
                       {study.stats.map((stat, i) => (
                         <div key={i}>

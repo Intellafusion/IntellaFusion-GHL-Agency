@@ -15,6 +15,9 @@ export interface CaseStudy {
   outcome: string;
   stats: { label: string; value: string }[];
   image: string;
+  images?: string[]; // Gallery images
+  deliverables?: string[]; // What was delivered
+  website?: string; // Client website URL
 }
 
 export interface Testimonial {
