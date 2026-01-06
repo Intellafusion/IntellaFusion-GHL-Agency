@@ -143,7 +143,7 @@ function About() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-gold transition-colors">Development Expertise</h3>
               <p className="text-slate-600 leading-relaxed">
-                10+ years building high-performance systems for startups and Fortune 500 companies. Specializes in automation, CRM integration, and conversion optimization.
+                August Built a career in technology and building high-performance systems for startups and large companies. Specializes in automation, CRM integration, and conversion optimization.
               </p>
             </motion.div>
 
@@ -156,7 +156,7 @@ function About() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-gold transition-colors">Industry Experience</h3>
               <p className="text-slate-600 leading-relaxed">
-                Led digital transformation projects reducing client acquisition costs by 60% and increasing conversion rates by 200% through strategic automation.
+                Led digital transformation projects ranging from fullstack development, to integration AI in legacy systems. Streamlining revenue and lead conversions is a focus and priority in every project.
               </p>
             </motion.div>
 
