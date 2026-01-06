@@ -182,7 +182,7 @@ function About() {
             className="mt-12 text-center"
           >
             <blockquote className="text-2xl lg:text-3xl font-serif text-slate-900 italic max-w-4xl mx-auto">
-              "I don't build websites. I build revenue engines that happen to live online."
+              "I build websites that look premium—and systems that convert attention into appointments"
             </blockquote>
             <p className="text-slate-600 mt-4 text-sm uppercase tracking-wider">— August Burke, MBA</p>
           </motion.div>
