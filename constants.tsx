@@ -178,7 +178,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
     quote: "We didn't need another brochure website. We needed a classy, professional website. IntellaFusion delivered exactly that.",
-    author: "Bill Burke.",
+    author: "Bill Burke",
     role: "Politician",
     company: "ElectBillBurke.com",
     image: "https://ik.imagekit.io/rrfyblezzy/ChatGPT%20Image%20Dec%2027,%202025,%2012_41_31%20PM.png?updatedAt=1766867491055"

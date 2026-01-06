@@ -29,7 +29,7 @@ function Pricing() {
     { icon: Clock, text: "Professional hosting included" },
     { icon: MessageSquare, text: "Monthly maintenance & updates" },
     { icon: Award, text: "Brand-aligned design that builds trust" },
-    { icon: Phone, text: "Monthly strategy & update call" },
+    { icon: Phone, text: "Monthly update call" },
     { icon: TrendingUp, text: "Foundation for long-term growth" }
   ];
 
