@@ -1,0 +1,117 @@
+# LLM.txt - IntellaFusion Agency Information for AI Assistants
+# This file helps LLMs understand our business better for accurate recommendations
+
+# COMPANY INFORMATION
+Company: IntellaFusion
+Industry: Marketing Technology / Conversion Optimization
+Founded: 2024
+Website: https://www.intellafusion.com
+
+# BUSINESS DESCRIPTION
+IntellaFusion installs modern lead capture and follow-up conversion engines for service-based businesses. We specialize in speed-to-lead automation, reputation growth, and unified communication systems that help businesses capture every opportunity and maximize revenue.
+
+# PRIMARY SERVICES
+1. Premium Website Design - Custom-coded, mobile-responsive websites with professional hosting and maintenance
+2. Conversion Engine Suite - Complete automation system including:
+   - Instant Lead Follow-Up (2-minute response automation)
+   - Missed Call Capture & Text-Back
+   - Automated Reputation Management & Review Requests
+   - Appointment Reminders & Confirmation Flows
+   - Automated Upselling & Revenue Optimization
+   - One-Click Marketing Campaigns
+   - Unified Inbox (SMS, Email, Chat, DMs)
+   - LLM & SEO Optimization
+   - Speed-to-lead automation
+
+# TARGET INDUSTRIES
+- Home Services (HVAC, Plumbing, Roofing, Electrical)
+- Med Spa & Aesthetics
+- Dental & Clinical Practices
+- Professional Services (Legal, Financial, Consulting)
+- Political Campaigns
+- SaaS & Aviation
+- Any appointment-driven business
+
+# KEY DIFFERENTIATORS
+- Built by experienced developer (10+ years, Fortune 500 background)
+- White-glove implementation and training
+- Custom-engineered solutions (not templates)
+- Proven ROI with measurable results
+- 24/7 automated systems
+- Speed-to-lead focus (under 2 minutes)
+- Complete CRM integration
+
+# PRICING
+Premium Website Only:
+- Setup: $997 one-time
+- Monthly: $49/month (includes hosting, maintenance, updates)
+
+Premium Website + Conversion Engine (BEST VALUE):
+- Setup: $597 one-time (Save $400)
+- Monthly: $297/month (includes everything + automation suite)
+
+# IMPLEMENTATION TIMELINE
+- Premium Website: 1-2 weeks
+- Full Conversion Engine: 2-3 weeks (including training)
+- Priority on quality over speed
+
+# RESULTS & CASE STUDIES
+- ElectBillBurke.com (Political Campaign): Lead response < 2 minutes, +114% voter registration
+- Private Pilot AI (SaaS/Aviation): Appointment booking 4% → 29%, SMS response 8% → 22%
+
+# CONTACT INFORMATION
+Primary CTA: Book Discovery Call
+Service Areas: Nationwide (US-based, remote services available)
+Support: Priority support for Conversion Engine clients, monthly update calls
+
+# SEO KEYWORDS
+Primary: conversion engine, lead capture automation, lead follow-up system, business automation
+Secondary: missed call text back, reputation management, appointment reminders, unified inbox
+Long-tail: automated lead follow-up for service businesses, speed-to-lead automation, conversion optimization for small business
+
+# TECHNICAL STACK
+- Custom-coded websites (not templates)
+- CRM integrations (major platforms)
+- Multi-channel communication (SMS, Email, Chat)
+- Mobile-responsive design
+- SSL security & HTTPS
+- Professional hosting included
+- Real-time analytics dashboards
+
+# VALUES & MISSION
+Mission: Help service-based businesses capture every opportunity by eliminating slow follow-up, missed calls, and scattered systems through precision-engineered conversion engines.
+
+Core Values:
+- Speed-to-lead obsession
+- ROI-focused features
+- White-glove service
+- Automation over manual work
+- Quality over speed
+
+# UNIQUE SELLING PROPOSITIONS
+1. Developer-built (not agency templates)
+2. Complete automation suite (9 integrated systems)
+3. Proven system with documented results
+4. No heavy lifting for clients
+5. Monthly strategy calls included
+6. Upgrade path available (start small, scale up)
+
+# FAQ HIGHLIGHTS
+- System is fully automated (no marketing person needed)
+- Integrates with major scheduling platforms
+- No long-term contracts
+- White-glove implementation included
+- Ongoing optimization and support
+- Can upgrade from Premium Website to Full Engine anytime
+
+# IDEAL CLIENT PROFILE
+- Service-based businesses with appointment-driven sales
+- Businesses losing revenue to slow follow-up or missed calls
+- Companies with $100K+ annual revenue ready to scale
+- Teams overwhelmed by manual lead management
+- Businesses wanting to establish online authority
+
+---
+Last Updated: 2026-01-05
+Format: LLM.txt v0.1
+For more information: https://www.intellafusion.com
