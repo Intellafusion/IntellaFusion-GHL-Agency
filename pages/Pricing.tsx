@@ -179,7 +179,7 @@ function Pricing() {
               <div className="mb-8 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-brand-gold/30">
                 <div className="mb-6">
                   <p className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Setup Fee</p>
-                  <div className="flex flex-wrap items-baseline gap-3">
+                  <div className="flex flex-wrap items-baseline justify-center lg:justify-start gap-3">
                     <span className="text-5xl font-bold text-white line-through opacity-40">$597</span>
                     <span className="text-5xl font-bold text-brand-gold">$0</span>
                     <span className="bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap">
