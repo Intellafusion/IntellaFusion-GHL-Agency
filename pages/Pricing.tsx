@@ -115,14 +115,14 @@ function Pricing() {
               
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">Premium Website</h3>
-                <p className="text-slate-600">Professional web presence that establishes credibility and trust</p>
+                <p className="text-slate-600">Professional done for you service that establishes credibility and trust</p>
               </div>
 
               <div className="mb-8 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border-2 border-slate-200 shadow-sm">
                 <div className="mb-6">
                   <p className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-2">Setup Fee</p>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-slate-900">$997</span>
+                    <span className="text-5xl font-bold text-slate-900">$597</span>
                     <span className="text-slate-600 text-lg">one-time</span>
                   </div>
                 </div>
@@ -180,10 +180,10 @@ function Pricing() {
                 <div className="mb-6">
                   <p className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Setup Fee</p>
                   <div className="flex flex-wrap items-baseline gap-3">
-                    <span className="text-5xl font-bold text-white">$597</span>
-                    <span className="text-slate-300 text-lg">one-time</span>
+                    <span className="text-5xl font-bold text-white line-through opacity-40">$597</span>
+                    <span className="text-5xl font-bold text-brand-gold">$0</span>
                     <span className="bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap">
-                      Save $400
+                      ✨ Implementation Fee Waived
                     </span>
                   </div>
                 </div>
