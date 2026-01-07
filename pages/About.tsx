@@ -156,7 +156,7 @@ function About() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-gold transition-colors">Industry Experience</h3>
               <p className="text-slate-600 leading-relaxed">
-                Led digital transformation projects ranging from fullstack development, to integration AI in legacy systems. Streamlining revenue and lead conversions is a focus and priority in every project.
+                Led digital transformation projects ranging from fullstack development, to integrating AI in legacy systems. Streamlining revenue and lead conversions is a focus and priority in every project.
               </p>
             </motion.div>
 
