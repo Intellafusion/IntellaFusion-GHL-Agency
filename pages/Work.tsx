@@ -229,6 +229,15 @@ function Work() {
                     {selectedCase.industry}
                   </span>
                 </div>
+
+                {/* Old/New Indicator for Litigation Focus Group */}
+                {selectedCase.client === 'Litigation Focus Group' && selectedCase.images && (
+                  <div className="absolute top-6 right-20 px-4 py-2 bg-brand-gold/95 backdrop-blur-sm rounded-lg shadow-lg">
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">
+                      {currentImageIndex < 3 ? '🕰️ OLD WEBSITE' : '✨ NEW WEBSITE'}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Content */}

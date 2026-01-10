@@ -171,6 +171,89 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Customer reactivation workflow',
       'Unified inbox for all communications'
     ]
+  },
+  {
+    id: '3',
+    client: 'Hospice Dynamix Insights',
+    industry: 'Healthcare / Post-Acute',
+    problem: 'Compliance threats and operational inefficiencies were putting the business at risk in the highly-regulated Post-Acute industry.',
+    solution: 'Custom fullstack application for compliance monitoring and data analysis.',
+    outcome: 'A fullstack application used to mitigate compliance threats in the Post-Acute Industry.',
+    stats: [
+      { label: 'Compliance Tracking', value: 'Real-time' },
+      { label: 'Risk Mitigation', value: 'Automated' }
+    ],
+    image: 'https://ik.imagekit.io/rrfyblezzy/HD%201.png',
+    images: [
+      'https://ik.imagekit.io/rrfyblezzy/HD%201.png',
+      'https://ik.imagekit.io/rrfyblezzy/hd%202.png',
+      'https://ik.imagekit.io/rrfyblezzy/hd%203.png',
+      'https://ik.imagekit.io/rrfyblezzy/hd%204.png',
+      'https://ik.imagekit.io/rrfyblezzy/hd%205.png'
+    ],
+    deliverables: [
+      'Custom fullstack compliance monitoring application',
+      'Real-time data analytics and reporting dashboard',
+      'Automated compliance threat detection system',
+      'Integrated risk assessment tools',
+      'Secure data management and HIPAA-compliant infrastructure'
+    ]
+  },
+  {
+    id: '4',
+    client: 'Litigation Focus Group',
+    industry: 'Legal Services',
+    problem: 'Outdated website failing to convey expertise and authority, losing potential clients to competitors with modern web presence.',
+    solution: 'Complete website overhaul with strategic positioning and modern design.',
+    outcome: 'Complete website overhaul, modernizing their web presence, and strategically positioning as the authority in industry.',
+    stats: [
+      { label: 'Modern Design', value: '100%' },
+      { label: 'Authority Position', value: 'Established' }
+    ],
+    image: 'https://ik.imagekit.io/rrfyblezzy/lg%204.png',
+    website: 'https://litigation-focus-groups-pllc.vercel.app/',
+    images: [
+      'https://ik.imagekit.io/rrfyblezzy/lg%201.png',
+      'https://ik.imagekit.io/rrfyblezzy/lg%202.png',
+      'https://ik.imagekit.io/rrfyblezzy/lg%203.png',
+      'https://ik.imagekit.io/rrfyblezzy/lg%204.png',
+      'https://ik.imagekit.io/rrfyblezzy/lg%205.png',
+      'https://ik.imagekit.io/rrfyblezzy/lg%206.png'
+    ],
+    deliverables: [
+      'Complete website redesign with modern, professional aesthetic',
+      'Strategic brand positioning and messaging',
+      'Authority-building content architecture',
+      'Mobile-responsive design optimized for conversions',
+      'SEO optimization for legal industry keywords'
+    ]
+  },
+  {
+    id: '5',
+    client: 'Incarnation Catholic Church',
+    industry: 'Religious / Non-Profit',
+    problem: 'Outdated website that didn\'t reflect the church\'s welcoming community or provide easy access to service information and events.',
+    solution: 'Complete website redesign with elegant, professional design and improved structure.',
+    outcome: 'Complete Website redesign and overhaul. Modernizing web presence with elegant and professional design and structure.',
+    stats: [
+      { label: 'User Experience', value: 'Enhanced' },
+      { label: 'Modern Design', value: '100%' }
+    ],
+    image: 'https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=1200',
+    website: 'https://incarnationcatholicchurch.org',
+    images: [
+      'https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1507842510343-583f7270a69f?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1511379938547-c1f69b13d835?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1516534775068-bb57845a1535?auto=format&fit=crop&q=80&w=1200'
+    ],
+    deliverables: [
+      'Complete website redesign with elegant, professional aesthetic',
+      'Improved information architecture for easy navigation',
+      'Event calendar and service schedule integration',
+      'Mobile-friendly responsive design',
+      'Enhanced accessibility features for all community members'
+    ]
   }
 ];
 
