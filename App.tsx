@@ -10,6 +10,15 @@ import { motion } from 'framer-motion';
 
 function App() {
   
+  // Helper function to get random case studies
+  const getRandomCaseStudies = (count: number) => {
+    const shuffled = [...CASE_STUDIES].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  };
+
+  // Get 2 random case studies for homepage
+  const [randomCaseStudies] = React.useState(() => getRandomCaseStudies(2));
+  
   // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -439,7 +448,7 @@ function App() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {CASE_STUDIES.map((study) => (
+              {randomCaseStudies.map((study) => (
                 <div key={study.id} className="bg-white rounded-xl overflow-hidden shadow-lg border border-slate-100 flex flex-col h-full">
                   <div className="h-48 bg-slate-200 relative overflow-hidden">
                      <img src={study.image} alt={study.client} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
