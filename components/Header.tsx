@@ -85,10 +85,6 @@ const Header: React.FC = () => {
 
         {/* Desktop Actions */}
         <div className="hidden lg:flex items-center gap-6">
-          <a href="#" className="flex items-center gap-2 text-xs font-medium text-slate-400 hover:text-white transition-colors">
-            <User className="w-3 h-3" />
-            Client Portal
-          </a>
           <a href="#contact-page">
             <Button variant="primary" size="sm">
               Book Discovery Call

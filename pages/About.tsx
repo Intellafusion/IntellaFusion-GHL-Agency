@@ -279,8 +279,8 @@ function About() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/#contact"
-              onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}
+              href="#contact-page"
+              onClick={(e) => { e.preventDefault(); window.location.hash = 'contact-page'; }}
               className="px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-xl"
             >
               Book Your Discovery Call <ArrowRight className="w-5 h-5" />

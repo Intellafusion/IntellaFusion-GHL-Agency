@@ -199,7 +199,7 @@ function Solutions() {
               href="#contact-page"
               className="px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors flex items-center justify-center gap-2 shadow-xl"
             >
-              Book Your Strategy Call <ArrowRight className="w-5 h-5" />
+              Book Your Discovery Call <ArrowRight className="w-5 h-5" />
             </a>
             <a 
               href="#work-page"

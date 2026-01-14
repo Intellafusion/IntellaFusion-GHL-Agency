@@ -39,7 +39,6 @@ const Footer: React.FC = () => {
             <li>intellafusion@gmail.com</li>
             <li>(901) 236-5831</li>
             <li>Memphis, TN</li>
-            <li className="pt-2"><a href="#" className="text-brand-gold hover:underline">Client Portal Login</a></li>
           </ul>
         </div>
       </div>
