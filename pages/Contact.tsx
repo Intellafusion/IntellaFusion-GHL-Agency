@@ -65,106 +65,36 @@ function Contact() {
         </div>
       </section>
 
-      {/* --- MAIN CONTENT SECTION --- */}
-      <section className="py-20 lg:py-24 bg-gradient-to-b from-white to-slate-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Left Side - Benefits */}
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-serif text-slate-900 mb-8">
-                Why Partner With IntellaFusion?
-              </h2>
+      {/* --- CALENDAR EMBED SECTION --- */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden"
+          >
+            <div className="p-8 lg:p-12">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl lg:text-4xl font-serif text-slate-900 mb-4">
+                  Schedule Your Discovery Call
+                </h2>
+                <p className="text-slate-600 text-lg">
+                  Choose a time that works best for you to discuss your business goals
+                </p>
+              </div>
               
-              <div className="space-y-6 mb-12">
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                  className="flex items-start gap-4"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold border border-brand-gold/20 flex-shrink-0">
-                    <Check className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-slate-900 font-bold text-lg mb-2">100% Done-For-You Setup</div>
-                    <div className="text-slate-600 leading-relaxed">We handle tech, design, and automation. You focus on running your business while we build your revenue engine.</div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                  className="flex items-start gap-4"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold border border-brand-gold/20 flex-shrink-0">
-                    <Check className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-slate-900 font-bold text-lg mb-2">Training Included</div>
-                    <div className="text-slate-600 leading-relaxed">Full team walkthrough and SOPs provided. We ensure everyone knows how to leverage your new systems.</div>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  className="flex items-start gap-4"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold border border-brand-gold/20 flex-shrink-0">
-                    <Check className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-slate-900 font-bold text-lg mb-2">White-Glove Support</div>
-                    <div className="text-slate-600 leading-relaxed">Ongoing optimization, strategy sessions, and priority support to maximize your ROI.</div>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Service Areas */}
-              <div className="pt-8 border-t-2 border-slate-200">
-                <div className="flex items-center gap-2 mb-3">
-                  <MapPin className="w-5 h-5 text-brand-gold" />
-                  <div className="text-sm text-slate-500 font-semibold uppercase tracking-wider">Service Areas:</div>
-                </div>
-                <div className="text-slate-900 font-medium text-lg">
-                  United States • Canada • UK • Australia
-                </div>
-              </div>
-
-              {/* Contact Info */}
-              <div className="mt-8 space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-brand-gold" />
-                  <a href="tel:9012365831" className="text-slate-700 hover:text-brand-gold transition-colors">
-                    (901) 236-5831
-                  </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-brand-gold" />
-                  <a href="mailto:intellafusion@gmail.com" className="text-slate-700 hover:text-brand-gold transition-colors">
-                    intellafusion@gmail.com
-                  </a>
-                </div>
+              {/* Calendar Embed */}
+              <div className="w-full overflow-auto" style={{maxHeight: '1400px'}}>
+                <iframe src="https://api.intellafusion.com/widget/booking/eoLxBOaG4hWdug3AWgh3" style={{width: '100%', border: 'none', overflow: 'hidden', height: '1050px'}} scrolling="no" id="eoLxBOaG4hWdug3AWgh3_1768412845210"></iframe>
+                <script src="https://api.intellafusion.com/js/form_embed.js" type="text/javascript"></script>
               </div>
             </div>
-
-            {/* Right Side - Form */}
-            <motion.div
-              id="contact-form"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <ContactForm />
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
+
+
 
       {/* --- A STREAMLINED INTEGRATION --- */}
       <section className="py-20 bg-brand-navy">
@@ -188,6 +118,52 @@ function Contact() {
               </div>
             ))}
           </div>
+
+          {/* Benefits Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white rounded-xl p-8 border border-slate-200 hover:border-brand-gold transition-all shadow-lg"
+            >
+              <div className="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold border border-brand-gold/20 mb-6">
+                <Check className="w-7 h-7" />
+              </div>
+              <h3 className="text-slate-900 font-bold text-xl mb-3">100% Done-For-You Setup</h3>
+              <p className="text-slate-600 leading-relaxed">We handle tech, design, and automation. You focus on running your business while we build your revenue engine.</p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white rounded-xl p-8 border border-slate-200 hover:border-brand-gold transition-all shadow-lg"
+            >
+              <div className="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold border border-brand-gold/20 mb-6">
+                <Check className="w-7 h-7" />
+              </div>
+              <h3 className="text-slate-900 font-bold text-xl mb-3">Training Included</h3>
+              <p className="text-slate-600 leading-relaxed">Full team walkthrough and SOPs provided. We ensure everyone knows how to leverage your new systems.</p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-white rounded-xl p-8 border border-slate-200 hover:border-brand-gold transition-all shadow-lg"
+            >
+              <div className="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center text-brand-gold border border-brand-gold/20 mb-6">
+                <Check className="w-7 h-7" />
+              </div>
+              <h3 className="text-slate-900 font-bold text-xl mb-3">White-Glove Support</h3>
+              <p className="text-slate-600 leading-relaxed">Ongoing optimization, strategy sessions, and priority support to maximize your ROI.</p>
+            </motion.div>
+          </div>
+
         </div>
       </section>
 
