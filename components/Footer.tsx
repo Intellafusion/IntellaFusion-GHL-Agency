@@ -42,8 +42,12 @@ const Footer: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-900 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>&copy; {new Date().getFullYear()} IntellaFusion. All rights reserved.</div>
+        <div className="flex gap-6 text-sm">
+          <a href="#privacy-policy-page" className="hover:text-brand-gold transition-colors">Privacy Policy</a>
+          <a href="#terms-conditions-page" className="hover:text-brand-gold transition-colors">Terms & Conditions</a>
+        </div>
       </div>
     </footer>
   );

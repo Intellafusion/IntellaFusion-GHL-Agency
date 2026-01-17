@@ -6,6 +6,8 @@ import Work from './pages/Work';
 import About from './pages/About';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 function Router() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -23,6 +25,10 @@ function Router() {
         setCurrentPage('pricing');
       } else if (hash === 'contact-page') {
         setCurrentPage('contact');
+      } else if (hash === 'privacy-policy-page') {
+        setCurrentPage('privacy-policy');
+      } else if (hash === 'terms-conditions-page') {
+        setCurrentPage('terms-conditions');
       } else {
         setCurrentPage('home');
       }
@@ -58,6 +64,14 @@ function Router() {
   
   if (currentPage === 'contact') {
     return <Contact />;
+  }
+  
+  if (currentPage === 'privacy-policy') {
+    return <PrivacyPolicy />;
+  }
+  
+  if (currentPage === 'terms-conditions') {
+    return <TermsConditions />;
   }
   
   return <App />;
