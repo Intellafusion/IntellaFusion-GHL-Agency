@@ -86,7 +86,7 @@ function Contact() {
               
               {/* Calendar Embed */}
               <div className="w-full overflow-auto" style={{maxHeight: '1400px'}}>
-                <iframe src="https://api.intellafusion.com/widget/booking/eoLxBOaG4hWdug3AWgh3" style={{width: '100%', border: 'none', overflow: 'hidden', height: '1050px'}} scrolling="no" id="eoLxBOaG4hWdug3AWgh3_1768412845210"></iframe>
+                <iframe src="https://api.intellafusion.com/widget/booking/eoLxBOaG4hWdug3AWgh3" style={{width: '100%', border: 'none', overflow: 'hidden', height: '1250px'}} scrolling="no" id="eoLxBOaG4hWdug3AWgh3_1768412845210"></iframe>
                 <script src="https://api.intellafusion.com/js/form_embed.js" type="text/javascript"></script>
               </div>
             </div>
