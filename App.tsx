@@ -344,7 +344,7 @@ function App() {
           <span className="text-brand-gold font-semibold tracking-wider text-sm uppercase">What We Install</span>
           <h2 className="text-3xl lg:text-4xl font-serif font-medium text-slate-900 mt-2">The IntellaFusion Conversion Engine</h2>
           <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
-            9 powerful systems working together to capture, engage, and convert your leads automatically.
+            Powerful systems working together to capture, engage, and convert your leads automatically.
           </p>
         </div>
         
@@ -390,7 +390,7 @@ function App() {
             onClick={(e) => { e.preventDefault(); (window as any).__scrollToSection = 'solutions-grid'; window.location.hash = 'solutions-page'; }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-amber-500 transition-colors shadow-lg hover:shadow-xl"
           >
-            View All 9 Solutions <ArrowRight className="w-5 h-5" />
+            View All Solutions <ArrowRight className="w-5 h-5" />
           </a>
         </div>
       </Section>

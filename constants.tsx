@@ -278,19 +278,19 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQS = [
   {
-    q: "Is this just a website design service?",
-    a: "While we do build beautiful, high-speed websites, our core value is the 'Conversion Engine'—the backend automation system that captures leads, follows up instantly, and manages your reputation."
+    q: "What does IntellaFusion actually do for my business?",
+    a: "We build you a professional website and then layer in smart automation systems that capture leads, follow up instantly, send appointment reminders, request reviews, and more—so you never miss an opportunity. You can start with just a website (Level 1) or add automation (Level 2) and complete revenue systems (Level 3) as you grow."
   },
   {
-    q: "Do I need to hire a marketing person to run this?",
-    a: "Not at all. The system is designed to be automated. Your front desk or sales team simply manages the conversations that land in the Unified Inbox. We handle the technical setup."
+    q: "Is this hard to learn or complicated to use?",
+    a: "Not at all. We handle 100% of the setup, training, and ongoing support. The systems run automatically in the background—your team just responds to conversations that land in the unified inbox. No technical skills required on your end."
   },
   {
-    q: "How long does implementation take?",
-    a: "From the Discovery Call to Launch Day, our typical timeline is 2-4 weeks for a full buildout. System-only installations can happen faster."
+    q: "How much does this cost?",
+    a: "We have three levels: Level 1 starts at $49/month for a professional website. Level 2 is $297/month for website + automation. Level 3 (IntellaOS) starts at $697/month for our complete revenue operating system. All levels include hosting, support, and maintenance. Setup fees are waived for Level 2 and 3."
   },
   {
-    q: "Does it integrate with my current booking software?",
-    a: "Yes. We integrate with most major scheduling platforms (Calendly, Google Calendar, Outlook, iCloud, etc...) to ensure a seamless flow between lead capture and appointment booking."
+    q: "How long before I see results?",
+    a: "Most clients see immediate improvements once we launch. Implementation takes 1-4 weeks depending on your level, and you'll start capturing more leads, reducing no-shows, and getting more reviews right away. The automation works 24/7 from day one."
   }
 ];
