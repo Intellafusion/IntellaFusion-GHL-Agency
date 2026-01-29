@@ -143,10 +143,10 @@ function Pricing() {
                 <div className="border-t border-slate-300 pt-6">
                   <p className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-2">Monthly Service</p>
                   <div className="flex items-baseline gap-2 mb-3">
-                    <span className="text-4xl font-bold text-slate-900">$49</span>
+                    <span className="text-4xl font-bold text-slate-900">$97</span>
                     <span className="text-slate-600 text-lg">/month</span>
                   </div>
-                  <p className="text-sm text-slate-600 leading-relaxed">Includes hosting, maintenance, and monthly update calls</p>
+                  <p className="text-sm text-slate-600 leading-relaxed">Includes hosting, maintenance, and any needed updates.</p>
                 </div>
               </div>
 
