@@ -36,7 +36,7 @@ function Pricing() {
     { icon: Check, text: "Everything in Premium Website" },
     { icon: Zap, text: "Speed-to-lead follow-up (text/email)" },
     { icon: Phone, text: "Missed call text-back" },
-    { icon: Clock, text: "Appointment reminders" },
+    { icon: Clock, text: "One-click marketing campaigns" },
     { icon: Star, text: "Review requests" },
     { icon: MessageSquare, text: "Unified inbox" },
     { icon: BarChart, text: "Lead tracking & analytics" },
@@ -48,11 +48,11 @@ function Pricing() {
   const intellaOSFeatures = [
     { icon: Check, text: "Everything in Levels 1 & 2" },
     { icon: Target, text: "Stage-based follow-up sequences" },
-    { icon: TrendingUp, text: "Quote-to-close automation" },
+    { icon: TrendingUp, text: "Quote-to-close automations" },
     { icon: Zap, text: "Drop-off recovery system" },
     { icon: Sparkles, text: "Automated upsells & add-ons" },
     { icon: Clock, text: "Recurring revenue loops" },
-    { icon: Users, text: "Database reactivation campaigns" },
+    { icon: Users, text: "Appointment reminders" },
     { icon: Crown, text: "Complete revenue loop system" },
     { icon: Shield, text: "White-glove implementation & training" },
     { icon: Award, text: "Priority support & optimization" }
