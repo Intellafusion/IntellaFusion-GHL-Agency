@@ -230,11 +230,19 @@ function Work() {
                   </span>
                 </div>
 
-                {/* Old/New Indicator for Litigation Focus Group */}
-                {selectedCase.client === 'Litigation Focus Group' && selectedCase.images && (
-                  <div className="absolute top-6 right-20 px-4 py-2 bg-brand-gold/95 backdrop-blur-sm rounded-lg shadow-lg">
+                {/* Old/New Indicator for Case Studies with Website Versions */}
+                {selectedCase.images && (selectedCase.client === 'Litigation Focus Group' || selectedCase.client === 'Incarnation Catholic Church' || selectedCase.client === 'Law Media Productions') && (
+                  <div className={`absolute top-6 right-20 px-4 py-2 backdrop-blur-sm rounded-lg shadow-lg ${
+                    (selectedCase.client === 'Litigation Focus Group' && currentImageIndex < 3) || 
+                    ((selectedCase.client === 'Incarnation Catholic Church' || selectedCase.client === 'Law Media Productions') && currentImageIndex < (selectedCase.client === 'Incarnation Catholic Church' ? 2 : 3))
+                      ? 'bg-red-600/95' 
+                      : 'bg-green-600/95'
+                  }`}>
                     <span className="text-xs font-bold text-white uppercase tracking-wider">
-                      {currentImageIndex < 3 ? '🕰️ OLD WEBSITE' : '✨ NEW WEBSITE'}
+                      {(selectedCase.client === 'Litigation Focus Group' && currentImageIndex < 3) || 
+                       ((selectedCase.client === 'Incarnation Catholic Church' || selectedCase.client === 'Law Media Productions') && currentImageIndex < (selectedCase.client === 'Incarnation Catholic Church' ? 2 : 3))
+                        ? '🕰️ OLD WEBSITE' 
+                        : '✨ NEW WEBSITE'}
                     </span>
                   </div>
                 )}

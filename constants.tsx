@@ -149,7 +149,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     industry: 'SaaS / Aviation',
     problem: 'needs a premium, conversion-focused website and funnel that turns traffic into paid customers. Bottlenecked by scattered lead capture, weak follow-up, and limited visibility.',
     solution: 'Reactivation Flow & Missed Call Text-Back.',
-    outcome: 'Supercharged their lead generation.',
+    outcome: 'Full-stack AI application build with supercharged lead generation.',
     stats: [
       { label: 'Appointment Booking Rate', value: '4% → 29%' },
       { label: 'SMS Response Rate', value: '8% → 22%' }
@@ -158,11 +158,10 @@ export const CASE_STUDIES: CaseStudy[] = [
     website: 'https://privatepilotai.com',
     images: [
       'https://ik.imagekit.io/rrfyblezzy/view.png',
-      'https://ik.imagekit.io/rrfyblezzy/ppai%206.png',
-      'https://ik.imagekit.io/rrfyblezzy/ppai%202.png',
-      'https://ik.imagekit.io/rrfyblezzy/ppai%203.png',
-      'https://ik.imagekit.io/rrfyblezzy/ppai%204.png',
-      'https://ik.imagekit.io/rrfyblezzy/ppai%205.png'
+      'https://ik.imagekit.io/rrfyblezzy/pp%202.png',
+      'https://ik.imagekit.io/rrfyblezzy/pp%203.png',
+      'https://ik.imagekit.io/rrfyblezzy/pp%204.png',
+      'https://ik.imagekit.io/rrfyblezzy/pp%205.png'
     ],
     deliverables: [
       'Premium conversion-focused website design',
@@ -240,12 +239,12 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'Modern Design', value: '100%' }
     ],
     image: 'https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=1200',
-    website: 'https://incarnationcatholicchurch.org',
     images: [
-      'https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1507842510343-583f7270a69f?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1511379938547-c1f69b13d835?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1516534775068-bb57845a1535?auto=format&fit=crop&q=80&w=1200'
+      'https://ik.imagekit.io/rrfyblezzy/ICS%201%20old.png',
+      'https://ik.imagekit.io/rrfyblezzy/ICS%202%20old.png',
+      'https://ik.imagekit.io/rrfyblezzy/ICS%201%20new.png',
+      'https://ik.imagekit.io/rrfyblezzy/ics%202%20new.png',
+      'https://ik.imagekit.io/rrfyblezzy/ics%203%20new.png'
     ],
     deliverables: [
       'Complete website redesign with elegant, professional aesthetic',
@@ -253,6 +252,35 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Event calendar and service schedule integration',
       'Mobile-friendly responsive design',
       'Enhanced accessibility features for all community members'
+    ]
+  },
+  {
+    id: '6',
+    client: 'Law Media Productions',
+    industry: 'Media / Film Production',
+    problem: 'The old website was 20 years outdated, not optimized for mobile devices, and failed to convey the professional quality of their work. This resulted in lost leads and missed conversion opportunities as potential clients turned to competitors with modern, credible web presences.',
+    solution: 'Total professional website makeover from the ground up with modern design, mobile optimization, and authority positioning.',
+    outcome: 'Complete professional makeover that instantly established credibility and modernized their online presence for the mobile-first world.',
+    stats: [
+      { label: 'Modern Design', value: '100%' },
+      { label: 'Mobile Optimized', value: 'Yes' }
+    ],
+    image: 'https://ik.imagekit.io/rrfyblezzy/LMP%204.png',
+    website: 'https://law-media-productions.vercel.app/',
+    images: [
+      'https://ik.imagekit.io/rrfyblezzy/LMP%201.png',
+      'https://ik.imagekit.io/rrfyblezzy/LMP%202.png',
+      'https://ik.imagekit.io/rrfyblezzy/LMP%203.png',
+      'https://ik.imagekit.io/rrfyblezzy/LMP%204.png',
+      'https://ik.imagekit.io/rrfyblezzy/LMP%205.png',
+      'https://ik.imagekit.io/rrfyblezzy/LMP%206.png'
+    ],
+    deliverables: [
+      'Complete professional website redesign with modern, premium aesthetic',
+      'Mobile-responsive design optimized for all devices',
+      'Portfolio showcase highlighting media production quality',
+      'Fast-loading performance optimization',
+      'Professional credibility-building design elements and copy'
     ]
   }
 ];
